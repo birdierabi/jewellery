@@ -1,0 +1,53 @@
+.social {
+  @include reset-list;
+}
+
+.social__item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.social__link {
+  line-height: 130%;
+  color: #ffffff;
+}
+
+.social__icon {
+  width: 15px;
+  height: 15px;
+}
+
+.social__text {
+  margin-left: 10px;
+}
+
+
+@media (max-width: $mobile-width) {
+  .social {
+    display: flex;
+  }
+
+  .social__link {
+    margin-right: 32px;
+    margin-left: -4px;
+
+    font-size: 0;
+  }
+
+  .social__icon {
+    width: 20px;
+    height: 21px;
+
+    &--twitter {
+      width: 20px;
+      height: 18px;
+    }
+  }
+
+  .social__text {
+    display: none;
+  }
+
+  .social__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}

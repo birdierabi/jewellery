@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+
+  src: url("../fonts/cormorant-garamond-v7-latin-regular.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond-v7-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+
+  src: url("../fonts/cormorant-garamond-v7-latin-600.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond-v7-latin-600.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+
+  src: url("../fonts/cormorant-garamond-v7-latin-700.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond-v7-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+
+  src: url("../fonts/cormorant-garamond-v7-latin-500italic.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond-v7-latin-500italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+
+  src: url("../fonts/poppins-v12-latin-regular.woff2") format("woff2"),
+    url("../fonts/poppins-v12-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+
+  src: url("../fonts/poppins-v12-latin-500.woff2") format("woff2"),
+    url("../fonts/poppins-v12-latin-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+
+  src: url("../fonts/poppins-v12-latin-700.woff2") format("woff2"),
+    url("../fonts/poppins-v12-latin-700.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #1d1613;
+
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.visually-hidden,
+.input[type="checkbox"].visually-hidden,
+.input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+a:focus,
+a:active {
+  opacity: 0.3;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

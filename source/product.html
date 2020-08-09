@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewellery shop</title>
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-regular.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-600.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-700.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-500italic.woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v12-latin-regular.woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v12-latin-500.woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v12-latin-700.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="page-header page-header--menu-active">
+    <div class="page-header__top container">
+      <button class="page-header__toggle page-header__toggle--active" type="button" aria-label="Menu button">
+        <svg class="page-header__icon page-header__icon--mobile-menu" width="25" height="18" role="img">
+          <use xlink:href="img/sprite.svg#icon-mobile-menu"></use>
+        </svg>
+      </button>
+      <form class="page-header__form search-form" action="https://echo.htmlacademy.ru" method="post">
+        <button aria-label="Search button">
+          <svg width="14" height="14" role="img">
+            <use xlink:href="img/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+        <label class="visually-hidden" for="input-search">Search form</label>
+        <input id="input-search" type="search" name="search"
+          placeholder="Type here to search">
+      </form>
+      <a class="page-header__logo" aria-label="Jewellery shop CH logo image">
+        <svg class="page-header__icon-logo" width="66" height="66" role="img">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <ul class="page-header__list">
+        <li class="page-header__item">
+          <a class="page-header__link" href="#">Login</a>
+        </li>
+        <li class="page-header__item">
+          <a class="page-header__link" href="#">Cart <span class="page-header__cart-counter">0</span></a>
+        </li>
+        <li class="page-header__item page-header__item--cart">
+          <a class="page-header__link" href="#" aria-label="Redirect to your cart page">
+            <svg class="page-header__icon page-header__icon--cart" width="18" height="16" role="img">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-header__bottom container">
+      <nav class="page-header__nav page-header__nav--main-page nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">What's new</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Chokers</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Necklaces</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Rings</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Earrings</a>
+          </li>
+        </ul>
+        <ul class="info-list info-list--header">
+          <li class="info-list__item">
+            <a class="info-list__link" href="#">About CH</a>
+          </li>
+          <li class="info-list__item">
+            <a class="info-list__link" href="#">Stores & Hours</a>
+          </li>
+          <li class="info-list__item">
+            <a class="info-list__link" href="#">Jobs</a>
+          </li>
+          <li class="info-list__item">
+            <a class="info-list__link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <a class="page-header__cart-link" href="#">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper container">
+
+      <div class="page-footer__left subscribe">
+        <h2 class="subscribe__title">The good stuff in your inbox</h2>
+        <p class="subscribe__text">News and updates from CH. No spam, we promise.</p>
+        <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="input-subscribe">E-mail form</label>
+          <input id="input-subscribe" type="email" name="subscribe-newsletter"
+            placeholder="Your E-mail">
+          <button type="submit">Sign Up
+            <svg width="29" height="9" role="img">
+              <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="page-footer__right">
+        <ul class="page-footer__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">Ordering & Payment</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">Terms & Conditions</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">Returns & Exchanges</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">Delivery</a>
+          </li>
+        </ul>
+        <ul class="page-footer__list info-list">
+          <li class="info-list__item">
+            <a class="info-list__link" href="#">About CH</a>
+          </li>
+          <li class="info-list__item">
+            <a class="info-list__link" href="#">Stores & Hours</a>
+          </li>
+          <li class="info-list__item">
+            <a class="info-list__link" href="#">Jobs</a>
+          </li>
+          <li class="info-list__item">
+            <a class="info-list__link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="page-footer__list social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon--fb" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+              <span class="social__text">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon--instagram" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+              <span class="social__text">Instagram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon--pinterest" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+              </svg>
+              <span class="social__text">Pinterest</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon--twitter" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg>
+              <span class="social__text">Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
