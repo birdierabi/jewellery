@@ -1,23 +1,13 @@
-.search-form {
-  position: relative;
-}
-
-.search-form button {
-  position: absolute;
-  top: 3px;
-
-  padding: 0;
-  width: 14px;
-  height: 14px;
-
-  font-size: 0; // Chrome
-
-  border: none;
-  background-color: inherit;
+.search-form label {
   cursor: pointer;
 
   &:hover {
     opacity: 0.3;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.7;
   }
 }
 
@@ -25,13 +15,16 @@
   width: 14px;
   height: 14px;
 
+  vertical-align: middle;
+
   fill: #000000;
 }
 
 .search-form input {
-  padding-left: 30px;
-  margin-bottom: 5px;
+  padding-left: 10px;
 
+  font-style: normal;
+  font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: #9b9997;
@@ -42,31 +35,22 @@
   &::placeholder {
     color: inherit;
   }
-
-  &:hover {
-    opacity: 0.3;
-  }
-
-  &:focus,
-  &:active {
-    opacity: 1;
-  }
 }
 
 @media (max-width: $tablet-width) {
-  .search-form svg {
-    width: 16px;
-    height: 16px;
-
-    fill: #ffffff;
+  .search-form label {
+    position: relative;
   }
 
-  .search-form button {
-    top: 47px;
+  .search-form svg {
+    position: absolute;
+    top: 4px;
     left: 12px;
 
     width: 16px;
     height: 16px;
+
+    fill: #ffffff;
   }
 
   .search-form input {
@@ -83,11 +67,5 @@
     &::placeholder {
       color: transparent;
     }
-  }
-}
-
-@media (max-width: $mobile-width) {
-  .search-form button {
-    top: 37px;
   }
 }

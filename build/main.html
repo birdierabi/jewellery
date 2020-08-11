@@ -26,13 +26,12 @@
           </svg>
         </button>
         <form class="page-header__form search-form" action="https://echo.htmlacademy.ru" method="post">
-          <button aria-label="Search button">
+          <label for="input-search" aria-label="Search button">
             <svg width="14" height="14" role="img">
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
-          </button>
-          <label class="visually-hidden" for="input-search">Search form</label>
-          <input id="input-search" type="search" name="search" placeholder="Type here to search">
+            <input id="input-search" type="search" name="search" placeholder="Type here to search">
+          </label>
         </form>
         <a class="page-header__logo" aria-label="Jewellery shop CH logo image">
           <svg class="page-header__icon-logo" width="66" height="66" role="img">
@@ -46,14 +45,12 @@
           <li class="page-header__item">
             <a class="page-header__link" href="#">Cart <span class="page-header__cart-counter">0</span></a>
           </li>
-          <li class="page-header__item page-header__item--cart">
-            <a class="page-header__link" href="#" aria-label="Redirect to your cart page">
-              <svg class="page-header__icon page-header__icon--cart" width="18" height="16" role="img">
-                <use xlink:href="img/sprite.svg#icon-cart"></use>
-              </svg>
-            </a>
-          </li>
         </ul>
+        <a class="page-header__cart-link" href="#" aria-label="Redirect to your cart page">
+          <svg class="page-header__icon page-header__icon--cart" width="18" height="16" role="img">
+            <use xlink:href="img/sprite.svg#icon-cart"></use>
+          </svg>
+        </a>
       </div>
       <div class="page-header__bottom container">
         <nav class="page-header__nav page-header__nav--main-page nav">
@@ -88,12 +85,130 @@
               <a class="info-list__link" href="#">Contact Us</a>
             </li>
           </ul>
-          <a class="page-header__cart-link" href="#">Login</a>
+          <a class="page-header__login-link" href="#">Login</a>
         </nav>
       </div>
     </header>
 
-    <main class="page__main">
+    <main class="page-main">
+      <h1 class="visually-hidden">Jewellery shop CH</h1>
+
+      <section class="fisrt-screen">
+        <h2 class="visually-hidden">First Screen</h2>
+        <div class="first-screen__wrapper">
+          <p class="first-screen__title">Perfection</p>
+          <p class="first-screen__slogan">made to be yours</p>
+        </div>
+      </section>
+
+      <div class="page-main__wrapper container">
+
+        <section class="slider">
+          <div class="slider__top">
+            <button class="slider__button" type="button" aria-label="Previous page">
+              <svg class="slider__icon" width="29" height="9" role="img">
+                <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+            <div class="slider__box">
+              <h2 class="slider__title box">New In</h2>
+              <a class="box__link" href="#">Shop Now</a>
+            </div>
+            <button class="slider__button" type="button" aria-label="Next page">
+              <svg class="slider__icon slider__icon--right-arrow" width="29" height="9" role="img">
+                <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+              </svg>
+          </button></div>
+          <div class="slider__bottom">
+            <ul class="slider__list product">
+              <li class="product__item">
+                <a class="product__link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile@1x.webp, img/purple-gemstone-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-carousel-tablet@1x.webp, img/purple-gemstone-necklace-carousel-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop@1x.webp, img/purple-gemstone-necklace-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile@1x.jpg 1x, img/purple-gemstone-necklace-mobile@2x.jpg 2x">
+                    <!-- 1x: 324px 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-carousel-tablet@1x.jpg 1x, img/purple-gemstone-necklace-carousel-tablet@2x.jpg 2x">
+                    <!-- 1x: 270px 2x: 560px -->
+                    <img class="product__image" src="img/purple-gemstone-necklace-desktop@1x.jpg" srcset="img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+                  </picture>
+                  <div class="product__description">
+                    <h3 class="product__title">Necklace with amethyst</h3>
+                    <span class="product__price">$ 145</span>
+                  </div>
+                </a>
+              </li>
+              <li class="product__item">
+                <a class="product__link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile@1x.webp, img/layered-choker-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet@1x.webp, img/layered-choker-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/layered-choker-necklace-desktop@1x.webp, img/layered-choker-necklace-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile@1x.jpg 1x, img/layered-choker-necklace-mobile@2x.jpg 2x">
+                    <!-- 1x: 324px 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet@1x.jpg 1x, img/layered-choker-necklace-tablet@2x.jpg 2x">
+                    <!-- 1x: 270px 2x: 560px -->
+                    <img class="product__image" src="img/layered-choker-necklace-desktop@1x.jpg" srcset="img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+                  </picture>
+                  <div class="product__description">
+                    <h3 class="product__title">Layered choker</h3>
+                    <span class="product__price">$ 115</span>
+                  </div>
+                </a>
+              </li>
+              <li class="product__item product__item--catalog">
+                <a class="product__link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/dainty-gold-necklace-mobile@1x.webp, img/dainty-gold-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="img/dainty-gold-necklace-desktop@1x.webp, img/dainty-gold-necklace-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/dainty-gold-necklace-mobile@1x.jpg 1x, img/dainty-gold-necklace-mobile@2x.jpg 2x">
+                    <!-- 1x: 270px 2x: 560px -->
+                    <img class="product__image" src="img/dainty-gold-necklace-desktop@1x.jpg" srcset="img/dainty-gold-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+                  </picture>
+                  <div class="product__description">
+                    <h3 class="product__title">Gold chain</h3>
+                    <span class="product__price">$ 215</span>
+                  </div>
+                </a>
+              </li>
+              <li class="product__item product__item--catalog">
+                <a class="product__link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/galaxy-earrings-mobile@1x.webp, img/galaxy-earrings-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="img/galaxy-earrings-desktop@1x.webp, img/galaxy-earrings-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/galaxy-earrings-mobile@1x.jpg 1x, img/galaxy-earrings-mobile@2x.jpg 2x">
+                    <!-- 1x: 270px 2x: 560px -->
+                    <img class="product__image" src="img/galaxy-earrings-desktop@1x.jpg" srcset="img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+                  </picture>
+                  <div class="product__description">
+                    <h3 class="product__title">Galaxy earrings</h3>
+                    <span class="product__price">$ 95</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="slider__pages pages">
+              <li class="pages__item pages__item--current"><a class="pages__link" href="#">1</a></li>
+              <li class="pages__item pages__item--mobile"><span>of</span></li>
+              <li class="pages__item"><a class="pages__link" href="#">2</a></li>
+              <li class="pages__item"><a class="pages__link" href="#">3</a></li>
+              <li class="pages__item pages__item--tablet"><a class="pages__link" href="#">4</a></li>
+              <li class="pages__item pages__item--tablet"><a class="pages__link" href="#">5</a></li>
+              <li class="pages__item pages__item--tablet pages__item--mobile"><a class="pages__link" href="#">6</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
     </main>
 
     <footer class="page-footer">
@@ -104,12 +219,14 @@
           <p class="subscribe__text">News and updates from CH. No spam, we promise.</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="input-subscribe">E-mail form</label>
-            <input id="input-subscribe" type="email" name="subscribe-newsletter" placeholder="Your E-mail">
-            <button type="submit">Sign Up
-              <svg width="29" height="9" role="img">
-                <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
-              </svg>
-            </button>
+            <div class="subscribe__inner">
+              <input id="input-subscribe" type="email" name="subscribe-newsletter" placeholder="Your E-mail">
+              <button type="submit">Sign Up
+                <svg width="29" height="9" role="img">
+                  <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
 
@@ -184,4 +301,5 @@
   </div>
 
 </body>
+
 </html>
