@@ -53,8 +53,8 @@
         </a>
       </div>
       <div class="page-header__bottom container">
-        <nav class="page-header__nav page-header__nav--main-page nav">
-          <ul class="nav__list">
+        <nav class="page-header__nav page-header__nav--main-page">
+          <ul class="page-header__nav-list nav">
             <li class="nav__item">
               <a class="nav__link" href="#">What's new</a>
             </li>
@@ -71,18 +71,15 @@
               <a class="nav__link" href="#">Earrings</a>
             </li>
           </ul>
-          <ul class="info-list info-list--header">
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">About CH</a>
+          <ul class="page-header__info-list info">
+            <li class="info__item">
+              <a class="info__link" href="#">About CH</a>
             </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Stores & Hours</a>
+            <li class="info__item">
+              <a class="info__link" href="#">Stores & Hours</a>
             </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Jobs</a>
-            </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Contact Us</a>
+            <li class="info__item">
+              <a class="info__link" href="#">Contact Us</a>
             </li>
           </ul>
           <a class="page-header__login-link" href="#">Login</a>
@@ -118,7 +115,8 @@
               <svg class="slider__icon slider__icon--right-arrow" width="29" height="9" role="img">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
               </svg>
-          </button></div>
+            </button>
+          </div>
           <div class="slider__bottom">
             <ul class="slider__list product">
               <li class="product__item">
@@ -207,8 +205,228 @@
             </ul>
           </div>
         </section>
-      </div>
 
+        <section class="blog">
+          <div class="blog__box">
+            <h2 class="blog__title box">Blog</h2>
+            <a class="box__link" href="#">Read All</a>
+          </div>
+          <div class="blog__wrapper">
+            <div class="blog__inner">
+              <article class="blog__item article">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/blog-care-jewellery-mobile@1x.webp, img/blog-care-jewellery-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/blog-care-jewellery-tablet@1x.webp, img/blog-care-jewellery-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/blog-care-jewellery-desktop@1x.webp, img/blog-care-jewellery-desktop@2x.webp 2x">
+
+                  <!-- 1х: 290px 2x: 580px -->
+                  <source media="(max-width: 767px)" srcset="img/blog-care-jewellery-mobile@1x.jpg 1x, img/blog-care-jewellery-mobile@2x.jpg 2x">
+                  <!-- 1x: 339px 2x: 678px -->
+                  <source media="(max-width: 1023px)" srcset="img/blog-care-jewellery-tablet@1x.jpg 1x, img/blog-care-jewellery-tablet@2x.jpg 2x">
+                  <!-- 1x: 285px 2x: 570px -->
+                  <img class="article__image" src="img/blog-care-jewellery-desktop@1x.jpg" srcset="img/blog-care-jewellery-desktop@2x.jpg 2x" width="285" height="300" alt="Image for blog article How to care for your jewellery">
+                </picture>
+                <div class="article__description">
+                  <time class="article__date" datetime="2019-09-30">September 30, 2019</time>
+                  <h4 class="article__title">How to care for your jewellery</h4>
+                  <a class="article__link" href="#">Read Article</a>
+                </div>
+              </article>
+              <article class="blog__item article article--reverse">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/blog-crystals-mobile@1x.webp, img/blog-crystals-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/blog-crystals-tablet@1x.webp, img/blog-crystals-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/blog-crystals-desktop@1x.webp, img/blog-crystals-desktop@2x.webp 2x">
+
+                  <!-- 1х: 290px 2x: 580px -->
+                  <source media="(max-width: 767px)" srcset="img/blog-crystals-mobile@1x.jpg 1x, img/blog-crystals-mobile@2x.jpg 2x">
+                  <!-- 1x: 339px 2x: 678px -->
+                  <source media="(max-width: 1023px)" srcset="img/blog-crystals-tablet@1x.jpg 1x, img/blog-crystals-tablet@2x.jpg 2x">
+                  <!-- 1x: 285px 2x: 570px -->
+                  <img class="article__image" src="img/blog-crystals-desktop@1x.jpg" srcset="img/blog-crystals-desktop@2x.jpg 2x" width="285" height="300" alt="Image for blog article Power of crystals">
+                </picture>
+                <div class="article__description">
+                  <time class="article__date" datetime="2019-09-23">September 23, 2019</time>
+                  <h4 class="article__title">Power of crystals</h4>
+                  <a class="article__link" href="#">Read Article</a>
+                </div>
+              </article>
+            </div>
+            <article class="blog__item article article--big">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/blog-trends-mobile@1x.webp, img/blog-trends-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/blog-trends-tablet@1x.webp, img/blog-trends-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/blog-trends-desktop@1x.webp, img/blog-trends-desktop@2x.webp 2x">
+
+                <!-- 1х: 290px 2x: 580px -->
+                <source media="(max-width: 767px)" srcset="img/blog-trends-mobile@1x.jpg 1x, img/blog-trends-mobile@2x.jpg 2x">
+                <!-- 1x: 339px 2x: 678px -->
+                <source media="(max-width: 1023px)" srcset="img/blog-trends-tablet@1x.jpg 1x, img/blog-trends-tablet@2x.jpg 2x">
+                <!-- 1x: 570px 2x: 1140px -->
+                <img class="article__image" src="img/blog-trends-desktop@1x.jpg" srcset="img/blog-trends-desktop@2x.jpg 2x" width="570" height="630" alt="Image for blog article AW 19 trends">
+              </picture>
+              <div class="article__description">
+                <time class="article__date" datetime="2019-09-16">September 16, 2019</time>
+                <h4 class="article__title">AW 19 trends</h4>
+                <a class="article__link" href="#">Read Article</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+
+        <section class="faq">
+          <h2 class="faq__title">Frequently asked questions</h2>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <div class="faq__inner">
+                <p class="faq__question">What materials are<br class="faq__question-span"> the jewellery made of?</p>
+                <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some<br class="faq__answer-span"> jewellery contains precious and semiprecious stones and crystals.</p>
+              </div>
+              <button class="faq__button faq__button--up" aria-label="F.A.Q. button">
+                <svg class="faq__icon" width="15" height="8" role="img">
+                  <use xlink:href="img/sprite.svg#icon-down-dir"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="faq__item">
+              <div class="faq__inner">
+                <p class="faq__question">Which countries<br class="faq__question-span"> do you deliver to?</p>
+              </div>
+              <button class="faq__button" aria-label="F.A.Q. button">
+                <svg class="faq__icon" width="15" height="8" role="img">
+                  <use xlink:href="img/sprite.svg#icon-down-dir"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="faq__item">
+              <div class="faq__inner">
+                <p class="faq__question">What are the<br class="faq__question-span"> payment methods?</p>
+              </div>
+              <button class="faq__button" aria-label="F.A.Q. button">
+                <svg class="faq__icon" width="15" height="8" role="img">
+                  <use xlink:href="img/sprite.svg#icon-down-dir"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="faq__item">
+              <div class="faq__inner">
+                <p class="faq__question">Can I return the<br class="faq__question-span"> jewellery if it didn’t fit me?
+                </p>
+              </div>
+              <button class="faq__button" aria-label="F.A.Q. button">
+                <svg class="faq__icon" width="15" height="8" role="img">
+                  <use xlink:href="img/sprite.svg#icon-down-dir"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+
+        <section class="gallery">
+          <div class="gallery__box">
+            <h2 class="gallery__title box"><span class="gallery__span">@</span>Chjewellery</h2>
+            <a class="box__link" href="#">Follow Us</a>
+          </div>
+          <div class="gallery__wrapper">
+            <div class="gallery__left-side">
+              <div class="gallery__block gallery__block--first">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/instagram-01-mobile@1x.webp, img/instagram-01-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/instagram-01-tablet@1x.webp, img/instagram-01-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/instagram-01-desktop@1x.webp, img/instagram-01-desktop@2x.webp 2x">
+
+                  <!-- 1х: 130px 2x: 260px -->
+                  <source media="(max-width: 767px)" srcset="img/instagram-01-mobile@1x.jpg 1x, img/instagram-01-mobile@2x.jpg 2x">
+                  <!-- 1x: 133px 2x: 266px -->
+                  <source media="(max-width: 1023px)" srcset="img/instagram-01-tablet@1x.jpg 1x, img/instagram-01-tablet@2x.jpg 2x">
+                  <!-- 1x: 230px 2x: 460px -->
+                  <img class="gallery__image gallery__image--01" src="img/instagram-01-desktop@1x.jpg" srcset="img/instagram-01-desktop@2x.jpg 2x" width="230" height="230" alt="Instagram photo shared by Jewellery CH shop">
+                </picture>
+
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/instagram-02-mobile@1x.webp, img/instagram-02-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/instagram-02-tablet@1x.webp, img/instagram-02-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/instagram-02-desktop@1x.webp, img/instagram-02-desktop@2x.webp 2x">
+
+                  <!-- 1х: 130px 2x: 260px -->
+                  <source media="(max-width: 767px)" srcset="img/instagram-02-mobile@1x.jpg 1x, img/instagram-02-mobile@2x.jpg 2x">
+                  <!-- 1x: 133px 2x: 266px -->
+                  <source media="(max-width: 1023px)" srcset="img/instagram-02-tablet@1x.jpg 1x, img/instagram-02-tablet@2x.jpg 2x">
+                  <!-- 1x: 230px 2x: 460px -->
+                  <img class="gallery__image gallery__image--02" src="img/instagram-02-desktop@1x.jpg" srcset="img/instagram-02-desktop@2x.jpg 2x" width="230" height="154" alt="Instagram photo shared by Jewellery CH shop">
+                </picture>
+              </div>
+              <div class="gallery__block gallery__block--second">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/instagram-03-mobile@1x.webp, img/instagram-03-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/instagram-03-tablet@1x.webp, img/instagram-03-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/instagram-03-desktop@1x.webp, img/instagram-03-desktop@2x.webp 2x">
+
+                  <!-- 1х: 145px 2x: 290px -->
+                  <source media="(max-width: 767px)" srcset="img/instagram-03-mobile@1x.jpg 1x, img/instagram-03-mobile@2x.jpg 2x">
+                  <!-- 1x: 231px 2x: 462px -->
+                  <source media="(max-width: 1023px)" srcset="img/instagram-03-tablet@1x.jpg 1x, img/instagram-03-tablet@2x.jpg 2x">
+                  <!-- 1x: 400px 2x: 800px -->
+                  <img class="gallery__image gallery__image--03" src="img/instagram-03-desktop@1x.jpg" srcset="img/instagram-03-desktop@2x.jpg 2x" width="400" height="414" alt="Instagram photo shared by Jewellery CH shop">
+                </picture>
+              </div>
+            </div>
+            <div class="gallery__right-side">
+              <div class="gallery__block gallery__block--third">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/instagram-04-mobile@1x.webp, img/instagram-04-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/instagram-04-tablet@1x.webp, img/instagram-04-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/instagram-04-desktop@1x.webp, img/instagram-04-desktop@2x.webp 2x">
+
+                  <!-- 1х: 145px 2x: 290px -->
+                  <source media="(max-width: 767px)" srcset="img/instagram-04-mobile@1x.jpg 1x, img/instagram-04-mobile@2x.jpg 2x">
+                  <!-- 1x: 134px 2x: 268px -->
+                  <source media="(max-width: 1023px)" srcset="img/instagram-04-tablet@1x.jpg 1x, img/instagram-04-tablet@2x.jpg 2x">
+                  <!-- 1x: 232px 2x: 464px -->
+                  <img class="gallery__image gallery__image--04" src="img/instagram-04-desktop@1x.jpg" srcset="img/instagram-04-desktop@2x.jpg 2x" width="232" height="193" alt="Instagram photo shared by Jewellery CH shop">
+                </picture>
+
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/instagram-05-mobile@1x.webp, img/instagram-05-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/instagram-05-tablet@1x.webp, img/instagram-05-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/instagram-05-desktop@1x.webp, img/instagram-05-desktop@2x.webp 2x">
+
+                  <!-- 1х: 130px 2x: 260px -->
+                  <source media="(max-width: 767px)" srcset="img/instagram-05-mobile@1x.jpg 1x, img/instagram-05-mobile@2x.jpg 2x">
+                  <!-- 1x: 126px 2x: 252px -->
+                  <source media="(max-width: 1023px)" srcset="img/instagram-05-tablet@1x.jpg 1x, img/instagram-05-tablet@2x.jpg 2x">
+                  <!-- 1x: 218px 2x: 436px -->
+                  <img class="gallery__image gallery__image--05" src="img/instagram-05-desktop@1x.jpg" srcset="img/instagram-05-desktop@2x.jpg 2x" width="218" height="191" alt="Instagram photo shared by Jewellery CH shop">
+                </picture>
+              </div>
+              <div class="gallery__block gallery__block--fouth">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/instagram-06-tablet@1x.webp, img/instagram-06-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/instagram-06-desktop@1x.webp, img/instagram-06-desktop@2x.webp 2x">
+
+                  <!-- 1x: 126px 2x: 252px -->
+                  <source media="(max-width: 1023px)" srcset="img/instagram-06-tablet@1x.jpg 1x, img/instagram-06-tablet@2x.jpg 2x">
+                  <!-- 1x: 218px 2x: 436px -->
+                  <img class="gallery__image gallery__image--06" src="img/instagram-06-desktop@1x.jpg" srcset="img/instagram-06-desktop@2x.jpg 2x" width="218" height="218" alt="Instagram photo shared by Jewellery CH shop">
+                </picture>
+
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/instagram-07-tablet@1x.webp, img/instagram-07-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/instagram-07-desktop@1x.webp, img/instagram-07-desktop@2x.webp 2x">
+
+                  <!-- 1x: 134px 2x: 268px -->
+                  <source media="(max-width: 1023px)" srcset="img/instagram-07-tablet@1x.jpg 1x, img/instagram-07-tablet@2x.jpg 2x">
+                  <!-- 1x: 232px 2x: 464px -->
+                  <img class="gallery__image gallery__image--07" src="img/instagram-07-desktop@1x.jpg" srcset="img/instagram-07-desktop@2x.jpg 2x" width="232" height="166" alt="Instagram photo shared by Jewellery CH shop">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
     </main>
 
     <footer class="page-footer">
@@ -231,65 +449,73 @@
         </div>
 
         <div class="page-footer__right">
-          <ul class="page-footer__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Ordering & Payment</a>
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Ordering & Payment</a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Terms & Conditions</a>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Terms & Conditions</a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Returns & Exchanges</a>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Returns & Exchanges</a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Delivery</a>
-            </li>
-          </ul>
-          <ul class="page-footer__list info-list">
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">About CH</a>
-            </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Stores & Hours</a>
-            </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Jobs</a>
-            </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Contact Us</a>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Delivery</a>
             </li>
           </ul>
-          <ul class="page-footer__list social">
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--fb" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
-                </svg>
-                <span class="social__text">Facebook</span>
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">About CH</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Stores & Hours</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Jobs</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="page-footer__list page-footer__list--social">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Redirect to a Facebook page">
+                <div class="page-footer__icon-wrapper">
+                  <svg class="page-footer__icon page-footer__icon--fb" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                  <span class="page-footer__text">Facebook</span>
+                </div>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--instagram" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
-                </svg>
-                <span class="social__text">Instagram</span>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Redirect to a Instagram page">
+                <div class="page-footer__icon-wrapper">
+                  <svg class="page-footer__icon page-footer__icon--instagram" width="15" height="15" role="img">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <span class="page-footer__text">Instagram</span>
+                </div>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--pinterest" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#icon-pinterest"></use>
-                </svg>
-                <span class="social__text">Pinterest</span>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Redirect to a Pinterest page">
+                <div class="page-footer__icon-wrapper">
+                  <svg class="page-footer__icon page-footer__icon--pinterest" width="15" height="15" role="img">
+                    <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+                  </svg>
+                  <span class="page-footer__text">Pinterest</span>
+                </div>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--twitter" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
-                </svg>
-                <span class="social__text">Twitter</span>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Redirect to a Twitter page">
+                <div class="page-footer__icon-wrapper">
+                  <svg class="page-footer__icon page-footer__icon--twitter" width="15" height="15" role="img">
+                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                  <span class="page-footer__text">Twitter</span>
+                </div>
               </a>
             </li>
           </ul>

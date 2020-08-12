@@ -1,4 +1,4 @@
-.nav__list {
+.nav {
   @include reset-list;
 
   display: flex;
@@ -10,12 +10,15 @@
   margin-left: 16px;
   margin-right: 19px;
 
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 24px;
   color: #1d1613;
 }
 
 @media (max-width: $tablet-width) {
-  .nav__list {
+  .nav {
     display: block;
     margin-bottom: 40px;
   }
@@ -34,7 +37,7 @@
 }
 
 @media (max-width: $mobile-width) {
-  .nav__list {
+  .nav {
     margin-bottom: 30px;
   }
 }

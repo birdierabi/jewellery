@@ -1,0 +1,187 @@
+.gallery {
+  margin-bottom: 130px;
+}
+
+.gallery__box {
+  margin-bottom: 65px;
+
+  text-align: center;
+}
+
+.gallery__title {
+  margin: 0;
+  margin-bottom: 17px;
+
+  letter-spacing: 0.03em;
+}
+
+.gallery__span {
+  font-family: $cg-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+
+  color: #000000;
+}
+
+.gallery__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery__left-side {
+  display: flex;
+  margin-right: 30px;
+}
+
+.gallery__right-side {
+  display: flex;
+}
+
+.gallery__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--first {
+    margin-right: 30px;
+  }
+
+  &--third {
+    margin-right: 16px;
+  }
+
+  &--fouth {
+    align-items: flex-end;
+  }
+}
+
+.gallery__image {
+  display: block;
+}
+
+
+@media (max-width: $tablet-width) {
+  .gallery {
+    margin-bottom: 80px;
+  }
+
+  .gallery__box {
+    margin-bottom: 65px;
+  }
+
+  .gallery__title {
+    margin-bottom: 18px;
+  }
+
+  .gallery__image {
+    &--01 {
+      width: 133px;
+    }
+
+    &--02 {
+      width: 133px;
+    }
+
+    &--03 {
+      width: 231px;
+    }
+
+    &--04 {
+      width: 134px;
+    }
+
+    &--05 {
+      width: 126px;
+    }
+
+    &--06 {
+      width: 126px;
+    }
+
+    &--07 {
+      width: 134px;
+    }
+  }
+
+  .gallery__left-side {
+    margin-right: 18px;
+  }
+
+  .gallery__block {
+    &--first {
+      margin-right: 18px;
+    }
+
+    &--third {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .gallery {
+    margin-bottom: 70px;
+  }
+
+  .gallery__box {
+    margin-bottom: 51px;
+  }
+
+  .gallery__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery__left-side {
+    margin-right: 0;
+    margin-bottom: 9px;
+  }
+
+  .gallery__block {
+    &--first {
+      margin-right: 15px;
+    }
+
+    &--third {
+      flex-direction: row-reverse;
+      align-items: baseline;
+      margin-right: 0;
+    }
+  }
+
+  .gallery__image {
+    &--01 {
+      width: 130px;
+      margin-bottom: 15px;
+    }
+
+    &--02 {
+      width: 130px;
+    }
+
+    &--03 {
+      width: 145px;
+    }
+
+    &--04 {
+      width: 145px;
+    }
+
+    &--05 {
+      width: 130px;
+      margin-right: 15px;
+    }
+
+    &--06 {
+      display: none;
+    }
+
+    &--07 {
+      display: none;
+    }
+  }
+}
+

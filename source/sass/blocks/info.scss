@@ -1,0 +1,39 @@
+.info {
+  display: none;
+}
+
+.info__item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.info__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #ffffff;
+}
+
+@media (max-width: $tablet-width) {
+  .info {
+    @include reset-list;
+
+    display: block;
+    margin-bottom: 45px;
+  }
+
+  .info__item {
+    margin-bottom: 21px;
+  }
+
+  .info__link {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .info {
+    margin-bottom: 35px;
+  }
+}
