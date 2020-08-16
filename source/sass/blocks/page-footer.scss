@@ -11,13 +11,13 @@
   background-color: #000000;
 }
 
-.page-footer__left {
+.page-footer__subscribe {
   display: flex;
   flex-direction: column;
   flex-basis: 42.7%;
 }
 
-.page-footer__right {
+.page-footer__nav {
   display: flex;
   justify-content: space-between;
   flex-basis: 49%;
@@ -74,11 +74,11 @@
     padding-right: 150px;
   }
 
-  .page-footer__left {
+  .page-footer__subscribe {
     margin-bottom: 47px;
   }
 
-  .page-footer__right {
+  .page-footer__nav {
     margin-top: 0;
   }
 }
@@ -88,7 +88,7 @@
     padding-right: 15px;
   }
 
-  .page-footer__right {
+  .page-footer__nav {
     flex-wrap: wrap;
     flex-direction: column;
   }

@@ -2,16 +2,16 @@
   cursor: pointer;
 
   &:hover {
-    opacity: 0.3;
+    opacity: 0.7;
   }
 
   &:focus,
   &:active {
-    opacity: 0.7;
+    opacity: 0.3;
   }
 }
 
-.search-form svg {
+.search-form__icon {
   width: 14px;
   height: 14px;
 
@@ -42,7 +42,7 @@
     position: relative;
   }
 
-  .search-form svg {
+  .search-form__icon {
     position: absolute;
     top: 4px;
     left: 12px;

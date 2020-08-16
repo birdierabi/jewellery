@@ -27,7 +27,7 @@
         </button>
         <form class="page-header__form search-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="input-search" aria-label="Search button">
-            <svg width="14" height="14" role="img">
+            <svg class="search-form__icon" width="14" height="14" role="img">
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
             <input id="input-search" type="search" name="search" placeholder="Type here to search">
@@ -93,23 +93,23 @@
       <section class="fisrt-screen">
         <h2 class="visually-hidden">First Screen</h2>
         <div class="first-screen__wrapper">
-          <p class="first-screen__title">Perfection</p>
-          <p class="first-screen__slogan">made to be yours</p>
+          <p>Perfection</p>
+          <span>made to be yours</span>
         </div>
       </section>
 
-      <div class="page-main__wrapper container">
+      <div class="container">
 
         <section class="slider">
-          <div class="slider__top">
+          <div class="slider__control">
             <button class="slider__button" type="button" aria-label="Previous page">
               <svg class="slider__icon" width="29" height="9" role="img">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
               </svg>
             </button>
             <div class="slider__box">
-              <h2 class="slider__title box">New In</h2>
-              <a class="box__link" href="#">Shop Now</a>
+              <h2>New In</h2>
+              <a href="#">Shop Now</a>
             </div>
             <button class="slider__button" type="button" aria-label="Next page">
               <svg class="slider__icon slider__icon--right-arrow" width="29" height="9" role="img">
@@ -117,7 +117,7 @@
               </svg>
             </button>
           </div>
-          <div class="slider__bottom">
+          <div class="slider__inner">
             <ul class="slider__list product">
               <li class="product__item">
                 <a class="product__link" href="#">
@@ -125,24 +125,18 @@
                     <source type="image/webp" media="(max-width: 767px)"
                       srcset="img/purple-gemstone-necklace-mobile@1x.webp, img/purple-gemstone-necklace-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/purple-gemstone-necklace-carousel-tablet@1x.webp, img/purple-gemstone-necklace-carousel-tablet@2x.webp 2x">
+                      srcset="img/slider-purple-gemstone-necklace-tablet@1x.webp, img/slider-purple-gemstone-necklace-tablet@2x.webp 2x">
                     <source type="image/webp"
-                      srcset="img/purple-gemstone-necklace-desktop@1x.webp, img/purple-gemstone-necklace-desktop@2x.webp 2x">
+                      srcset="img/slider-purple-gemstone-necklace-desktop@1x.webp, img/slider-purple-gemstone-necklace-desktop@2x.webp 2x">
 
-                    <!-- 1х: 130px 2x: 260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/purple-gemstone-necklace-mobile@1x.jpg 1x, img/purple-gemstone-necklace-mobile@2x.jpg 2x">
-                    <!-- 1x: 324px 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/purple-gemstone-necklace-carousel-tablet@1x.jpg 1x, img/purple-gemstone-necklace-carousel-tablet@2x.jpg 2x">
                     <!-- 1x: 270px 2x: 560px -->
-                    <img class="product__image" src="img/purple-gemstone-necklace-desktop@1x.jpg"
-                      srcset="img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284"
+                    <img src="img/slider-purple-gemstone-necklace-desktop@1x.jpg"
+                      srcset="img/slider-purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284"
                       alt="Necklace with amethyst">
                   </picture>
                   <div class="product__description">
-                    <h3 class="product__title">Necklace with amethyst</h3>
-                    <span class="product__price">$ 145</span>
+                    <h3>Necklace with amethyst</h3>
+                    <span>$ 145</span>
                   </div>
                 </a>
               </li>
@@ -156,20 +150,14 @@
                     <source type="image/webp"
                       srcset="img/layered-choker-necklace-desktop@1x.webp, img/layered-choker-necklace-desktop@2x.webp 2x">
 
-                    <!-- 1х: 130px 2x: 260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/layered-choker-necklace-mobile@1x.jpg 1x, img/layered-choker-necklace-mobile@2x.jpg 2x">
-                    <!-- 1x: 324px 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/layered-choker-necklace-tablet@1x.jpg 1x, img/layered-choker-necklace-tablet@2x.jpg 2x">
                     <!-- 1x: 270px 2x: 560px -->
-                    <img class="product__image" src="img/layered-choker-necklace-desktop@1x.jpg"
+                    <img src="img/layered-choker-necklace-desktop@1x.jpg"
                       srcset="img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284"
                       alt="Layered сhoker">
                   </picture>
                   <div class="product__description">
-                    <h3 class="product__title">Layered choker</h3>
-                    <span class="product__price">$ 115</span>
+                    <h3>Layered choker</h3>
+                    <span>$ 115</span>
                   </div>
                 </a>
               </li>
@@ -181,16 +169,13 @@
                     <source type="image/webp"
                       srcset="img/dainty-gold-necklace-desktop@1x.webp, img/dainty-gold-necklace-desktop@2x.webp 2x">
 
-                    <!-- 1х: 130px 2x: 260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/dainty-gold-necklace-mobile@1x.jpg 1x, img/dainty-gold-necklace-mobile@2x.jpg 2x">
                     <!-- 1x: 270px 2x: 560px -->
-                    <img class="product__image" src="img/dainty-gold-necklace-desktop@1x.jpg"
+                    <img src="img/dainty-gold-necklace-desktop@1x.jpg"
                       srcset="img/dainty-gold-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain">
                   </picture>
                   <div class="product__description">
-                    <h3 class="product__title">Gold chain</h3>
-                    <span class="product__price">$ 215</span>
+                    <h3>Gold chain</h3>
+                    <span>$ 215</span>
                   </div>
                 </a>
               </li>
@@ -202,36 +187,34 @@
                     <source type="image/webp"
                       srcset="img/galaxy-earrings-desktop@1x.webp, img/galaxy-earrings-desktop@2x.webp 2x">
 
-                    <!-- 1х: 130px 2x: 260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/galaxy-earrings-mobile@1x.jpg 1x, img/galaxy-earrings-mobile@2x.jpg 2x">
                     <!-- 1x: 270px 2x: 560px -->
-                    <img class="product__image" src="img/galaxy-earrings-desktop@1x.jpg"
-                      srcset="img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+                    <img src="img/galaxy-earrings-desktop@1x.jpg" srcset="img/galaxy-earrings-desktop@2x.jpg 2x"
+                      width="270" height="284" alt="Galaxy earrings">
                   </picture>
                   <div class="product__description">
-                    <h3 class="product__title">Galaxy earrings</h3>
-                    <span class="product__price">$ 95</span>
+                    <h3>Galaxy earrings</h3>
+                    <span>$ 95</span>
                   </div>
                 </a>
               </li>
             </ul>
-            <ul class="slider__pages pages">
-              <li class="pages__item pages__item--current"><a class="pages__link" href="#">1</a></li>
-              <li class="pages__item pages__item--mobile"><span>of</span></li>
-              <li class="pages__item"><a class="pages__link" href="#">2</a></li>
-              <li class="pages__item"><a class="pages__link" href="#">3</a></li>
-              <li class="pages__item pages__item--tablet"><a class="pages__link" href="#">4</a></li>
-              <li class="pages__item pages__item--tablet"><a class="pages__link" href="#">5</a></li>
-              <li class="pages__item pages__item--tablet pages__item--mobile"><a class="pages__link" href="#">6</a></li>
+            <ul class="slider__pagination pagination">
+              <li class="pagination__item pagination__item--current"><a class="pagination__link" href="#">1</a></li>
+              <li class="pagination__item pagination__item--mobile"><span>of</span></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+              <li class="pagination__item pagination__item--tablet"><a class="pagination__link" href="#">4</a></li>
+              <li class="pagination__item pagination__item--tablet"><a class="pagination__link" href="#">5</a></li>
+              <li class="pagination__item pagination__item--tablet pagination__item--mobile"><a class="pagination__link"
+                  href="#">6</a></li>
             </ul>
           </div>
         </section>
 
         <section class="blog">
           <div class="blog__box">
-            <h2 class="blog__title box">Blog</h2>
-            <a class="box__link" href="#">Read All</a>
+            <h2>Blog</h2>
+            <a href="#">Read All</a>
           </div>
           <div class="blog__wrapper">
             <div class="blog__inner">
@@ -244,21 +227,14 @@
                   <source type="image/webp"
                     srcset="img/blog-care-jewellery-desktop@1x.webp, img/blog-care-jewellery-desktop@2x.webp 2x">
 
-                  <!-- 1х: 290px 2x: 580px -->
-                  <source media="(max-width: 767px)"
-                    srcset="img/blog-care-jewellery-mobile@1x.jpg 1x, img/blog-care-jewellery-mobile@2x.jpg 2x">
-                  <!-- 1x: 339px 2x: 678px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/blog-care-jewellery-tablet@1x.jpg 1x, img/blog-care-jewellery-tablet@2x.jpg 2x">
                   <!-- 1x: 285px 2x: 570px -->
-                  <img class="article__image" src="img/blog-care-jewellery-desktop@1x.jpg"
-                    srcset="img/blog-care-jewellery-desktop@2x.jpg 2x" width="285" height="300"
-                    alt="Image for blog article How to care for your jewellery">
+                  <img src="img/blog-care-jewellery-desktop@1x.jpg" srcset="img/blog-care-jewellery-desktop@2x.jpg 2x"
+                    width="285" height="300" alt="Image for blog article How to care for your jewellery">
                 </picture>
                 <div class="article__description">
                   <time class="article__date" datetime="2019-09-30">September 30, 2019</time>
-                  <h4 class="article__title">How to care for your jewellery</h4>
-                  <a class="article__link" href="#">Read Article</a>
+                  <h4>How to care for your jewellery</h4>
+                  <a href="#">Read Article</a>
                 </div>
               </article>
               <article class="blog__item article article--reverse">
@@ -270,21 +246,14 @@
                   <source type="image/webp"
                     srcset="img/blog-crystals-desktop@1x.webp, img/blog-crystals-desktop@2x.webp 2x">
 
-                  <!-- 1х: 290px 2x: 580px -->
-                  <source media="(max-width: 767px)"
-                    srcset="img/blog-crystals-mobile@1x.jpg 1x, img/blog-crystals-mobile@2x.jpg 2x">
-                  <!-- 1x: 339px 2x: 678px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/blog-crystals-tablet@1x.jpg 1x, img/blog-crystals-tablet@2x.jpg 2x">
                   <!-- 1x: 285px 2x: 570px -->
-                  <img class="article__image" src="img/blog-crystals-desktop@1x.jpg"
-                    srcset="img/blog-crystals-desktop@2x.jpg 2x" width="285" height="300"
-                    alt="Image for blog article Power of crystals">
+                  <img src="img/blog-crystals-desktop@1x.jpg" srcset="img/blog-crystals-desktop@2x.jpg 2x" width="285"
+                    height="300" alt="Image for blog article Power of crystals">
                 </picture>
                 <div class="article__description">
                   <time class="article__date" datetime="2019-09-23">September 23, 2019</time>
-                  <h4 class="article__title">Power of crystals</h4>
-                  <a class="article__link" href="#">Read Article</a>
+                  <h4>Power of crystals</h4>
+                  <a href="#">Read Article</a>
                 </div>
               </article>
             </div>
@@ -296,21 +265,14 @@
                   srcset="img/blog-trends-tablet@1x.webp, img/blog-trends-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/blog-trends-desktop@1x.webp, img/blog-trends-desktop@2x.webp 2x">
 
-                <!-- 1х: 290px 2x: 580px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/blog-trends-mobile@1x.jpg 1x, img/blog-trends-mobile@2x.jpg 2x">
-                <!-- 1x: 339px 2x: 678px -->
-                <source media="(max-width: 1023px)"
-                  srcset="img/blog-trends-tablet@1x.jpg 1x, img/blog-trends-tablet@2x.jpg 2x">
                 <!-- 1x: 570px 2x: 1140px -->
-                <img class="article__image" src="img/blog-trends-desktop@1x.jpg"
-                  srcset="img/blog-trends-desktop@2x.jpg 2x" width="570" height="630"
-                  alt="Image for blog article AW 19 trends">
+                <img src="img/blog-trends-desktop@1x.jpg" srcset="img/blog-trends-desktop@2x.jpg 2x" width="570"
+                  height="630" alt="Image for blog article AW 19 trends">
               </picture>
               <div class="article__description">
                 <time class="article__date" datetime="2019-09-16">September 16, 2019</time>
-                <h4 class="article__title">AW 19 trends</h4>
-                <a class="article__link" href="#">Read Article</a>
+                <h4>AW 19 trends</h4>
+                <a href="#">Read Article</a>
               </div>
             </article>
           </div>
@@ -318,50 +280,37 @@
 
 
         <section class="faq">
-          <h2 class="faq__title">Frequently asked questions</h2>
+          <h2>Frequently asked questions</h2>
           <ul class="faq__list">
             <li class="faq__item">
-              <div class="faq__inner">
-                <p class="faq__question">What materials are<br class="faq__question-span"> the jewellery made of?</p>
-                <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some<br
-                    class="faq__answer-span"> jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-              <button class="faq__button faq__button--up" aria-label="F.A.Q. button">
-                <svg class="faq__icon" width="15" height="8" role="img">
+              <h4 tabindex="0">What materials are<br> the jewellery made of?
+                <svg class="faq__icon--up-dir" width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
-              </button>
+              </h4>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
+                contains precious and semiprecious stones and crystals.</p>
             </li>
             <li class="faq__item">
-              <div class="faq__inner">
-                <p class="faq__question">Which countries<br class="faq__question-span"> do you deliver to?</p>
-              </div>
-              <button class="faq__button" aria-label="F.A.Q. button">
-                <svg class="faq__icon" width="15" height="8" role="img">
+              <h4 tabindex="0">Which countries<br> do you deliver to?
+                <svg width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
-              </button>
+              </h4>
             </li>
             <li class="faq__item">
-              <div class="faq__inner">
-                <p class="faq__question">What are the<br class="faq__question-span"> payment methods?</p>
-              </div>
-              <button class="faq__button" aria-label="F.A.Q. button">
-                <svg class="faq__icon" width="15" height="8" role="img">
+              <h4 tabindex="0">What are the<br> payment methods?
+                <svg width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
-              </button>
+              </h4>
             </li>
             <li class="faq__item">
-              <div class="faq__inner">
-                <p class="faq__question">Can I return the<br class="faq__question-span"> jewellery if it didn’t fit me?
-                </p>
-              </div>
-              <button class="faq__button" aria-label="F.A.Q. button">
-                <svg class="faq__icon" width="15" height="8" role="img">
+              <h4 tabindex="0">Can I return the<br> jewellery if it didn’t fit me?
+                <svg width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
-              </button>
+              </h4>
             </li>
           </ul>
         </section>
@@ -369,12 +318,12 @@
 
         <section class="gallery">
           <div class="gallery__box">
-            <h2 class="gallery__title box"><span class="gallery__span">@</span>Chjewellery</h2>
-            <a class="box__link" href="#">Follow Us</a>
+            <h2><span>@</span>Chjewellery</h2>
+            <a href="#">Follow Us</a>
           </div>
           <div class="gallery__wrapper">
-            <div class="gallery__left-side">
-              <div class="gallery__block gallery__block--first">
+            <div class="gallery__small-pictures-wrapper">
+              <div class="gallery__block gallery__block--earrings">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/instagram-01-mobile@1x.webp, img/instagram-01-mobile@2x.webp 2x">
@@ -383,12 +332,6 @@
                   <source type="image/webp"
                     srcset="img/instagram-01-desktop@1x.webp, img/instagram-01-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px 2x: 260px -->
-                  <source media="(max-width: 767px)"
-                    srcset="img/instagram-01-mobile@1x.jpg 1x, img/instagram-01-mobile@2x.jpg 2x">
-                  <!-- 1x: 133px 2x: 266px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/instagram-01-tablet@1x.jpg 1x, img/instagram-01-tablet@2x.jpg 2x">
                   <!-- 1x: 230px 2x: 460px -->
                   <img class="gallery__image gallery__image--01" src="img/instagram-01-desktop@1x.jpg"
                     srcset="img/instagram-01-desktop@2x.jpg 2x" width="230" height="230"
@@ -403,19 +346,13 @@
                   <source type="image/webp"
                     srcset="img/instagram-02-desktop@1x.webp, img/instagram-02-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px 2x: 260px -->
-                  <source media="(max-width: 767px)"
-                    srcset="img/instagram-02-mobile@1x.jpg 1x, img/instagram-02-mobile@2x.jpg 2x">
-                  <!-- 1x: 133px 2x: 266px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/instagram-02-tablet@1x.jpg 1x, img/instagram-02-tablet@2x.jpg 2x">
                   <!-- 1x: 230px 2x: 460px -->
                   <img class="gallery__image gallery__image--02" src="img/instagram-02-desktop@1x.jpg"
                     srcset="img/instagram-02-desktop@2x.jpg 2x" width="230" height="154"
                     alt="Instagram photo shared by Jewellery CH shop">
                 </picture>
               </div>
-              <div class="gallery__block gallery__block--second">
+              <div class="gallery__block gallery__block--big-picture">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/instagram-03-mobile@1x.webp, img/instagram-03-mobile@2x.webp 2x">
@@ -424,12 +361,6 @@
                   <source type="image/webp"
                     srcset="img/instagram-03-desktop@1x.webp, img/instagram-03-desktop@2x.webp 2x">
 
-                  <!-- 1х: 145px 2x: 290px -->
-                  <source media="(max-width: 767px)"
-                    srcset="img/instagram-03-mobile@1x.jpg 1x, img/instagram-03-mobile@2x.jpg 2x">
-                  <!-- 1x: 231px 2x: 462px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/instagram-03-tablet@1x.jpg 1x, img/instagram-03-tablet@2x.jpg 2x">
                   <!-- 1x: 400px 2x: 800px -->
                   <img class="gallery__image gallery__image--03" src="img/instagram-03-desktop@1x.jpg"
                     srcset="img/instagram-03-desktop@2x.jpg 2x" width="400" height="414"
@@ -437,8 +368,8 @@
                 </picture>
               </div>
             </div>
-            <div class="gallery__right-side">
-              <div class="gallery__block gallery__block--third">
+            <div class="gallery__big-pictures-wrapper">
+              <div class="gallery__block gallery__block--jewellery-set">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/instagram-04-mobile@1x.webp, img/instagram-04-mobile@2x.webp 2x">
@@ -447,12 +378,6 @@
                   <source type="image/webp"
                     srcset="img/instagram-04-desktop@1x.webp, img/instagram-04-desktop@2x.webp 2x">
 
-                  <!-- 1х: 145px 2x: 290px -->
-                  <source media="(max-width: 767px)"
-                    srcset="img/instagram-04-mobile@1x.jpg 1x, img/instagram-04-mobile@2x.jpg 2x">
-                  <!-- 1x: 134px 2x: 268px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/instagram-04-tablet@1x.jpg 1x, img/instagram-04-tablet@2x.jpg 2x">
                   <!-- 1x: 232px 2x: 464px -->
                   <img class="gallery__image gallery__image--04" src="img/instagram-04-desktop@1x.jpg"
                     srcset="img/instagram-04-desktop@2x.jpg 2x" width="232" height="193"
@@ -467,28 +392,19 @@
                   <source type="image/webp"
                     srcset="img/instagram-05-desktop@1x.webp, img/instagram-05-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px 2x: 260px -->
-                  <source media="(max-width: 767px)"
-                    srcset="img/instagram-05-mobile@1x.jpg 1x, img/instagram-05-mobile@2x.jpg 2x">
-                  <!-- 1x: 126px 2x: 252px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/instagram-05-tablet@1x.jpg 1x, img/instagram-05-tablet@2x.jpg 2x">
                   <!-- 1x: 218px 2x: 436px -->
                   <img class="gallery__image gallery__image--05" src="img/instagram-05-desktop@1x.jpg"
                     srcset="img/instagram-05-desktop@2x.jpg 2x" width="218" height="191"
                     alt="Instagram photo shared by Jewellery CH shop">
                 </picture>
               </div>
-              <div class="gallery__block gallery__block--fouth">
+              <div class="gallery__block gallery__block--small-picture">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/instagram-06-tablet@1x.webp, img/instagram-06-tablet@2x.webp 2x">
                   <source type="image/webp"
                     srcset="img/instagram-06-desktop@1x.webp, img/instagram-06-desktop@2x.webp 2x">
 
-                  <!-- 1x: 126px 2x: 252px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/instagram-06-tablet@1x.jpg 1x, img/instagram-06-tablet@2x.jpg 2x">
                   <!-- 1x: 218px 2x: 436px -->
                   <img class="gallery__image gallery__image--06" src="img/instagram-06-desktop@1x.jpg"
                     srcset="img/instagram-06-desktop@2x.jpg 2x" width="218" height="218"
@@ -501,9 +417,6 @@
                   <source type="image/webp"
                     srcset="img/instagram-07-desktop@1x.webp, img/instagram-07-desktop@2x.webp 2x">
 
-                  <!-- 1x: 134px 2x: 268px -->
-                  <source media="(max-width: 1023px)"
-                    srcset="img/instagram-07-tablet@1x.jpg 1x, img/instagram-07-tablet@2x.jpg 2x">
                   <!-- 1x: 232px 2x: 464px -->
                   <img class="gallery__image gallery__image--07" src="img/instagram-07-desktop@1x.jpg"
                     srcset="img/instagram-07-desktop@2x.jpg 2x" width="232" height="166"
@@ -520,9 +433,9 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
 
-        <div class="page-footer__left subscribe">
+        <div class="page-footer__subscribe subscribe">
           <h2 class="subscribe__title">The good stuff in your inbox</h2>
-          <p class="subscribe__text">News and updates from CH. No spam, we promise.</p>
+          <p>News and updates from CH. No spam, we promise.</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="input-subscribe">E-mail form</label>
             <div class="subscribe__inner">
@@ -536,7 +449,7 @@
           </form>
         </div>
 
-        <div class="page-footer__right">
+        <div class="page-footer__nav">
           <ul class="page-footer__list">
             <li class="page-footer__item">
               <a class="page-footer__link" href="#">Ordering & Payment</a>

@@ -27,7 +27,7 @@
   color: #9b9997;
 }
 
-.article__title {
+.article h4 {
   margin: 0;
   max-width: 170px;
   margin-bottom: 40px;
@@ -40,11 +40,11 @@
   color: #000000;
 }
 
-.article__image {
+.article img {
   display: block;
 }
 
-.article__link {
+.article a {
   padding-bottom: 3px;
 
   font-style: normal;
@@ -80,7 +80,7 @@
 
 
 @media (max-width: $tablet-width) {
-  .article__image {
+  .article img {
     width: 339px;
   }
 
@@ -110,7 +110,7 @@
     align-items: center;
   }
 
-  .article__image {
+  .article img {
     width: 290px;
   }
 

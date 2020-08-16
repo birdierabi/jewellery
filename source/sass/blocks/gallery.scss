@@ -1,21 +1,43 @@
 .gallery {
-  margin-bottom: 130px;
+  padding-top: 56px;
+  padding-bottom: 130px;
 }
 
 .gallery__box {
-  margin-bottom: 65px;
+  margin-bottom: 60px;
 
   text-align: center;
 }
 
-.gallery__title {
+.gallery__box h2 {
   margin: 0;
   margin-bottom: 17px;
 
+  font-family: $cg-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
   letter-spacing: 0.03em;
 }
 
-.gallery__span {
+.gallery__box a {
+  display: inline-block;
+  padding-bottom: 5px;
+
+  vertical-align: baseline;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: #1d1613;
+
+  border-bottom: 1px solid #a87b62;
+}
+
+.gallery__box span {
   font-family: $cg-font;
   font-style: normal;
   font-weight: bold;
@@ -31,12 +53,12 @@
   justify-content: center;
 }
 
-.gallery__left-side {
+.gallery__small-pictures-wrapper {
   display: flex;
   margin-right: 30px;
 }
 
-.gallery__right-side {
+.gallery__big-pictures-wrapper {
   display: flex;
 }
 
@@ -45,15 +67,15 @@
   flex-direction: column;
   justify-content: space-between;
 
-  &--first {
+  &--earrings {
     margin-right: 30px;
   }
 
-  &--third {
+  &--jewellery-set {
     margin-right: 16px;
   }
 
-  &--fouth {
+  &--small-picture {
     align-items: flex-end;
   }
 }
@@ -65,15 +87,20 @@
 
 @media (max-width: $tablet-width) {
   .gallery {
-    margin-bottom: 80px;
+    padding-top: 33px;
+    padding-bottom: 80px;
   }
 
   .gallery__box {
-    margin-bottom: 65px;
+    margin-bottom: 60px;
   }
 
-  .gallery__title {
+  .gallery__box h2 {
     margin-bottom: 18px;
+  }
+
+  .gallery__box a {
+    padding-bottom: 4px;
   }
 
   .gallery__image {
@@ -106,16 +133,16 @@
     }
   }
 
-  .gallery__left-side {
+  .gallery__small-pictures-wrapper {
     margin-right: 18px;
   }
 
   .gallery__block {
-    &--first {
+    &--earrings {
       margin-right: 18px;
     }
 
-    &--third {
+    &--jewellery-set {
       margin-right: 10px;
     }
   }
@@ -123,11 +150,12 @@
 
 @media (max-width: $mobile-width) {
   .gallery {
-    margin-bottom: 70px;
+    padding-top: 26px;
+    padding-bottom: 70px;
   }
 
   .gallery__box {
-    margin-bottom: 51px;
+    margin-bottom: 46px;
   }
 
   .gallery__wrapper {
@@ -135,17 +163,17 @@
     align-items: center;
   }
 
-  .gallery__left-side {
+  .gallery__small-pictures-wrapper {
     margin-right: 0;
     margin-bottom: 9px;
   }
 
   .gallery__block {
-    &--first {
+    &--earrings {
       margin-right: 15px;
     }
 
-    &--third {
+    &--jewellery-set {
       flex-direction: row-reverse;
       align-items: baseline;
       margin-right: 0;

@@ -1,0 +1,337 @@
+.filter {
+  margin-right: 50px;
+
+  text-align: center;
+}
+
+.filter__form {
+  margin-bottom: 35px;
+
+  text-align: left;
+
+  border-top: 1px solid #a87b62;
+  border-left: 1px solid #a87b62;
+  border-right: 1px solid #a87b62;
+}
+
+.filter__legend-wrapper svg {
+  width: 17px;
+  height: 24px;
+
+  stroke: #a87b62;
+  fill: #ffffff;
+}
+
+.filter__icon--up-dir {
+  width: 17px;
+  height: 24px;
+
+  stroke: #a87b62;
+  fill: #ffffff;
+
+  transform: rotate(-180deg);
+}
+
+.filter__form fieldset {
+  margin: 0;
+  padding: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+
+  border: none;
+  border-bottom: 1px solid #a87b62;
+
+  &:last-child {
+    padding-bottom: 40px;
+  }
+}
+
+.filter__form fieldset:first-child {
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  .filter__legend-wrapper {
+    margin-bottom: 15px;
+  }
+}
+
+.filter__legend-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filter__list {
+  @include reset-list;
+}
+
+.filter__item label {
+  position: relative;
+
+  display: block;
+  padding-left: 35px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 10px;
+    top: 8px;
+
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid #a87b62;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filter__item input[type="checkbox"]:checked + label::before {
+  background-color: #a87b62;
+}
+
+.filter__range {
+  width: 200px;
+}
+
+.filter__button-apply {
+  display: block;
+  width: 100%;
+  height: 68px;
+  padding: 0;
+  margin-bottom: 27px;
+
+  color: #ffffff;
+
+  background-color: #a87b62;
+  border: 1px solid #a87b62;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filter__link {
+  display: inline-block;
+  padding-bottom: 4px;
+
+  vertical-align: baseline;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: #1d1613;
+
+  border-bottom: 1px solid #a87b62;
+}
+
+.filter__button-close {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .filter {
+    position: relative;
+
+    display: none;
+    width: 442px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+  }
+
+  .filter__form {
+    margin-bottom: 40px;
+
+    border: none;
+  }
+
+  .filter__form fieldset {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 18px;
+
+    &:last-child {
+      padding-bottom: 61px;
+    }
+  }
+
+  .filter fieldset:first-child {
+    padding-top: 34px;
+    padding-bottom: 28px;
+  }
+
+  .filter__item label {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 40px;
+
+    font-size: 16px;
+
+    &::before {
+      left: 10px;
+      top: 9px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .filter__legend-wrapper svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .filter__range {
+    width: 304px;
+    margin-left: 10px;
+  }
+
+  .filter__button-apply {
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+
+  .filter__link {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 146px;
+    padding-right: 146px;
+
+    border: 1px solid #a87b62;
+  }
+
+  .filter__button-close {
+    content: "";
+
+    position: absolute;
+    top: -15px;
+    right: -16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+    background-color: #1d1613;
+    background-position: center;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .filter__button-close svg {
+    fill: #ffffff;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .filter {
+    display: none;
+    width: 270px;
+  }
+
+  .filter__form {
+    margin-bottom: 30px;
+  }
+
+  .filter__form fieldset {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:last-child {
+      padding-bottom: 51px;
+    }
+  }
+
+  .filter fieldset:first-child {
+    padding-top: 23px;
+    padding-bottom: 18px;
+  }
+
+  .filter__legend-wrapper svg {
+    width: 20px;
+  }
+
+  .filter__range {
+    margin-left: -10px;
+    margin-right: -10px;
+    width: 250px;
+  }
+
+  .filter__button-apply {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+
+  .filter__link {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .filter__button-close {
+    top: -16px;
+    right: -10px;
+  }
+}

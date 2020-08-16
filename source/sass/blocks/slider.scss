@@ -1,15 +1,18 @@
 .slider {
-  margin-bottom: 84px;
+  padding-top: 120px;
+  padding-bottom: 42px;
 }
 
-.slider__top {
+.slider__control {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 
 .slider__button {
+  display: flex;
+  align-items: center;
   width: 29px;
   height: 11px;
   padding: 0;
@@ -20,12 +23,12 @@
   cursor: pointer;
 
   &:hover {
-    opacity: 0.3;
+    opacity: 0.7;
   }
 
   &:focus,
   &:active {
-    opacity: 1;
+    opacity: 0.3;
   }
 }
 
@@ -44,16 +47,37 @@
   }
 }
 
-.slider__title {
-  margin: 0;
-  margin-bottom: 25px;
-}
-
 .slider__box {
   text-align: center;
 }
 
-.slider__bottom {
+.slider__box h2 {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-family: $cg-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.slider__box a {
+  display: inline-block;
+
+  vertical-align: baseline;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: #1d1613;
+
+  border-bottom: 1px solid #a87b62;
+}
+
+.slider__inner {
   display: flex;
   flex-direction: column;
 }
@@ -66,21 +90,22 @@
   margin-bottom: 20px;
 }
 
-.slider__pages {
-  @include reset-list;
-
-  display: flex;
-  justify-content: center;
+.slider__pagination {
   padding: 32px;
 }
 
 @media (max-width: $tablet-width) {
   .slider {
-    margin-bottom: 33px;
+    padding-top: 71px;
+    padding-bottom: 19px;
   }
 
-  .slider__top {
-    margin-bottom: 55px;
+  .slider__box h2 {
+    margin-bottom: 20px;
+  }
+
+  .slider__box a {
+    padding-bottom: 3px;
   }
 
   .slider__button {
@@ -91,11 +116,11 @@
   .slider__icon {
     width: 36px;
     height: 15px;
-    margin-top: 7px;
+    margin-top: 9px;
   }
 
-  .slider__title {
-    margin-bottom: 20px;
+  .slider__control {
+    margin-bottom: 50px;
   }
 
   .slider__list {
@@ -107,13 +132,18 @@
 
 @media (max-width: $mobile-width) {
   .slider {
-    margin-bottom: 25px;
+    padding-top: 61px;
+    padding-bottom: 11px;
   }
 
-  .slider__top {
+  .slider__control {
     display: block;
 
-    margin-bottom: 45px;
+    margin-bottom: 40px;
+  }
+
+  .slider__pagination {
+    padding: 33px;
   }
 
   .slider__button {

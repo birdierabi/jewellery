@@ -28,7 +28,7 @@
         </button>
         <form class="page-header__form search-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="input-search" aria-label="Search button">
-            <svg width="14" height="14" role="img">
+            <svg class="search-form__icon" width="14" height="14" role="img">
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
             <input id="input-search" type="search" name="search" placeholder="Type here to search">
@@ -54,8 +54,8 @@
         </a>
       </div>
       <div class="page-header__bottom container">
-        <nav class="page-header__nav nav">
-          <ul class="nav__list">
+        <nav class="page-header__nav">
+          <ul class="page-header__nav-list nav">
             <li class="nav__item">
               <a class="nav__link" href="#">What's new</a>
             </li>
@@ -72,18 +72,15 @@
               <a class="nav__link" href="#">Earrings</a>
             </li>
           </ul>
-          <ul class="info-list info-list--header">
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">About CH</a>
+          <ul class="page-header__info-list info">
+            <li class="info__item">
+              <a class="info__link" href="#">About CH</a>
             </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Stores & Hours</a>
+            <li class="info__item">
+              <a class="info__link" href="#">Stores & Hours</a>
             </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Jobs</a>
-            </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Contact Us</a>
+            <li class="info__item">
+              <a class="info__link" href="#">Contact Us</a>
             </li>
           </ul>
           <a class="page-header__login-link" href="#">Login</a>
@@ -91,14 +88,114 @@
       </div>
     </header>
 
-    <main class="page-main"></main>
+    <main class="page-main">
+
+      <div class="container">
+
+        <section class="slider">
+          <div class="slider__control">
+            <button class="slider__button" type="button" aria-label="Previous page">
+              <svg class="slider__icon" width="29" height="9" role="img">
+                <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+            <div class="slider__box">
+              <h2>You May Also Like</h2>
+              <a href="#">Shop Now</a>
+            </div>
+            <button class="slider__button" type="button" aria-label="Next page">
+              <svg class="slider__icon slider__icon--right-arrow" width="29" height="9" role="img">
+                <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="slider__inner">
+            <ul class="slider__list product">
+              <li class="product__item">
+                <a class="product__link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile@1x.webp, img/purple-gemstone-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-purple-gemstone-necklace-tablet@1x.webp, img/slider-purple-gemstone-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/slider-purple-gemstone-necklace-desktop@1x.webp, img/slider-purple-gemstone-necklace-desktop@2x.webp 2x">
+
+                    <!-- 1x: 270px 2x: 560px -->
+                    <img src="img/slider-purple-gemstone-necklace-desktop@1x.jpg" srcset="img/slider-purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+                  </picture>
+                  <div class="product__description">
+                    <h3>Necklace with amethyst</h3>
+                    <span>$ 145</span>
+                  </div>
+                </a>
+              </li>
+              <li class="product__item">
+                <a class="product__link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile@1x.webp, img/layered-choker-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet@1x.webp, img/layered-choker-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/layered-choker-necklace-desktop@1x.webp, img/layered-choker-necklace-desktop@2x.webp 2x">
+
+                    <!-- 1x: 270px 2x: 560px -->
+                    <img src="img/layered-choker-necklace-desktop@1x.jpg" srcset="img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+                  </picture>
+                  <div class="product__description">
+                    <h3>Layered choker</h3>
+                    <span>$ 115</span>
+                  </div>
+                </a>
+              </li>
+              <li class="product__item product__item--catalog">
+                <a class="product__link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/dainty-gold-necklace-mobile@1x.webp, img/dainty-gold-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="img/dainty-gold-necklace-desktop@1x.webp, img/dainty-gold-necklace-desktop@2x.webp 2x">
+
+                    <!-- 1x: 270px 2x: 560px -->
+                    <img src="img/dainty-gold-necklace-desktop@1x.jpg" srcset="img/dainty-gold-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+                  </picture>
+                  <div class="product__description">
+                    <h3>Gold chain</h3>
+                    <span>$ 215</span>
+                  </div>
+                </a>
+              </li>
+              <li class="product__item product__item--catalog">
+                <a class="product__link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/galaxy-earrings-mobile@1x.webp, img/galaxy-earrings-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="img/galaxy-earrings-desktop@1x.webp, img/galaxy-earrings-desktop@2x.webp 2x">
+
+                    <!-- 1x: 270px 2x: 560px -->
+                    <img src="img/galaxy-earrings-desktop@1x.jpg" srcset="img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+                  </picture>
+                  <div class="product__description">
+                    <h3>Galaxy earrings</h3>
+                    <span>$ 95</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="slider__pagination pagination">
+              <li class="pagination__item pagination__item--current"><a class="pagination__link" href="#">1</a></li>
+              <li class="pagination__item pagination__item--mobile"><span>of</span></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+              <li class="pagination__item pagination__item--tablet"><a class="pagination__link" href="#">4</a></li>
+              <li class="pagination__item pagination__item--tablet"><a class="pagination__link" href="#">5</a></li>
+              <li class="pagination__item pagination__item--tablet pagination__item--mobile"><a class="pagination__link" href="#">6</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+    </main>
+
 
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
 
-        <div class="page-footer__left subscribe">
+        <div class="page-footer__subscribe subscribe">
           <h2 class="subscribe__title">The good stuff in your inbox</h2>
-          <p class="subscribe__text">News and updates from CH. No spam, we promise.</p>
+          <p>News and updates from CH. No spam, we promise.</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="input-subscribe">E-mail form</label>
             <div class="subscribe__inner">
@@ -112,66 +209,74 @@
           </form>
         </div>
 
-        <div class="page-footer__right">
-          <ul class="page-footer__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Ordering & Payment</a>
+        <div class="page-footer__nav">
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Ordering & Payment</a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Terms & Conditions</a>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Terms & Conditions</a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Returns & Exchanges</a>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Returns & Exchanges</a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Delivery</a>
-            </li>
-          </ul>
-          <ul class="page-footer__list info-list">
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">About CH</a>
-            </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Stores & Hours</a>
-            </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Jobs</a>
-            </li>
-            <li class="info-list__item">
-              <a class="info-list__link" href="#">Contact Us</a>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Delivery</a>
             </li>
           </ul>
-          <ul class="page-footer__list social">
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--fb" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
-                </svg>
-                <span class="social__text">Facebook</span>
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">About CH</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Stores & Hours</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Jobs</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="page-footer__list page-footer__list--social">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Redirect to a Facebook page">
+                <div class="page-footer__icon-wrapper">
+                  <svg class="page-footer__icon page-footer__icon--fb" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                  <span class="page-footer__text">Facebook</span>
+                </div>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--instagram" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
-                </svg>
-                <span class="social__text">Instagram</span>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Redirect to a Instagram page">
+                <div class="page-footer__icon-wrapper">
+                  <svg class="page-footer__icon page-footer__icon--instagram" width="15" height="15" role="img">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <span class="page-footer__text">Instagram</span>
+                </div>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--pinterest" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#icon-pinterest"></use>
-                </svg>
-                <span class="social__text">Pinterest</span>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Redirect to a Pinterest page">
+                <div class="page-footer__icon-wrapper">
+                  <svg class="page-footer__icon page-footer__icon--pinterest" width="15" height="15" role="img">
+                    <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+                  </svg>
+                  <span class="page-footer__text">Pinterest</span>
+                </div>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--twitter" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
-                </svg>
-                <span class="social__text">Twitter</span>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Redirect to a Twitter page">
+                <div class="page-footer__icon-wrapper">
+                  <svg class="page-footer__icon page-footer__icon--twitter" width="15" height="15" role="img">
+                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                  <span class="page-footer__text">Twitter</span>
+                </div>
               </a>
             </li>
           </ul>
