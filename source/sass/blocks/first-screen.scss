@@ -1,4 +1,4 @@
-.fisrt-screen {
+.first-screen {
   background-image: url("../img/main-background-desktop@1x.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -71,7 +71,7 @@
 
 
 @media (max-width: $tablet-width) {
-  .fisrt-screen {
+  .first-screen {
     background-image: url("../img/main-background-tablet@1x.jpg");
     background-size: 100% auto;
 
@@ -98,7 +98,7 @@
 }
 
 @media (max-width: $mobile-width) {
-  .fisrt-screen {
+  .first-screen {
     background-image: url("../img/main-background-mobile@1x.jpg");
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {

@@ -45,7 +45,7 @@
   border-bottom: 1px solid #a87b62;
 
   &:last-child {
-    padding-bottom: 40px;
+    padding-bottom: 18px;
   }
 }
 
@@ -126,12 +126,20 @@
 }
 
 .filter__button-apply {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 68px;
   padding: 0;
+  padding-top: 23px;
+  padding-bottom: 23px;
   margin-bottom: 27px;
 
+  font-family: $poppins-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
   color: #ffffff;
 
   background-color: #a87b62;
@@ -149,8 +157,9 @@
   }
 }
 
-.filter__link {
+.filter__button-reset {
   display: inline-block;
+  padding: 0;
   padding-bottom: 4px;
 
   vertical-align: baseline;
@@ -161,7 +170,21 @@
   text-align: center;
   color: #1d1613;
 
+  background-color: inherit;
+
+  border: none;
   border-bottom: 1px solid #a87b62;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .filter__button-close {
@@ -172,7 +195,7 @@
   .filter {
     position: relative;
 
-    display: none;
+    display: block;
     width: 442px;
     margin-left: auto;
     margin-right: auto;
@@ -195,7 +218,7 @@
     font-size: 18px;
 
     &:last-child {
-      padding-bottom: 61px;
+      padding-bottom: 34px;
     }
   }
 
@@ -237,7 +260,7 @@
     margin-bottom: 25px;
   }
 
-  .filter__link {
+  .filter__button-reset {
     padding-top: 23px;
     padding-bottom: 23px;
     padding-left: 146px;
@@ -284,7 +307,7 @@
 
 @media (max-width: $mobile-width) {
   .filter {
-    display: none;
+    display: block;
     width: 270px;
   }
 
@@ -299,7 +322,7 @@
     padding-right: 20px;
 
     &:last-child {
-      padding-bottom: 51px;
+      padding-bottom: 24px;
     }
   }
 
@@ -323,7 +346,7 @@
     margin-bottom: 20px;
   }
 
-  .filter__link {
+  .filter__button-reset {
     padding-top: 23px;
     padding-bottom: 23px;
     padding-left: 80px;

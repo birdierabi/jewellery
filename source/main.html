@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jewellery shop</title>
-  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-regular.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-600.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-700.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-500italic.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-v12-latin-regular.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-v12-latin-500.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-v12-latin-700.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-600.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-700.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-italic.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-500italic.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/poppins-v12-latin-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/poppins-v12-latin-500.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/poppins-v12-latin-700.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -90,7 +91,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Jewellery shop CH</h1>
 
-      <section class="fisrt-screen">
+      <section class="first-screen">
         <h2 class="visually-hidden">First Screen</h2>
         <div class="first-screen__wrapper">
           <p>Perfection</p>
@@ -103,7 +104,7 @@
         <section class="slider">
           <div class="slider__control">
             <button class="slider__button" type="button" aria-label="Previous page">
-              <svg class="slider__icon" width="29" height="9" role="img">
+              <svg class="slider__icon slider__icon--left-arrow" width="29" height="9" role="img">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
               </svg>
             </button>
@@ -112,15 +113,15 @@
               <a href="#">Shop Now</a>
             </div>
             <button class="slider__button" type="button" aria-label="Next page">
-              <svg class="slider__icon slider__icon--right-arrow" width="29" height="9" role="img">
+              <svg class="slider__icon" width="29" height="9" role="img">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
               </svg>
             </button>
           </div>
           <div class="slider__inner">
-            <ul class="slider__list product">
-              <li class="product__item">
-                <a class="product__link" href="#">
+            <ul class="slider__list">
+              <li class="slider__item">
+                <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
                       srcset="img/purple-gemstone-necklace-mobile@1x.webp, img/purple-gemstone-necklace-mobile@2x.webp 2x">
@@ -134,14 +135,14 @@
                       srcset="img/slider-purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284"
                       alt="Necklace with amethyst">
                   </picture>
-                  <div class="product__description">
+                  <div class="slider__description">
                     <h3>Necklace with amethyst</h3>
-                    <span>$ 145</span>
+                    <span class="slider__price">$ 145</span>
                   </div>
                 </a>
               </li>
-              <li class="product__item">
-                <a class="product__link" href="#">
+              <li class="slider__item">
+                <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
                       srcset="img/layered-choker-necklace-mobile@1x.webp, img/layered-choker-necklace-mobile@2x.webp 2x">
@@ -155,14 +156,14 @@
                       srcset="img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284"
                       alt="Layered сhoker">
                   </picture>
-                  <div class="product__description">
+                  <div class="slider__description">
                     <h3>Layered choker</h3>
-                    <span>$ 115</span>
+                    <span class="slider__price">$ 115</span>
                   </div>
                 </a>
               </li>
-              <li class="product__item product__item--catalog">
-                <a class="product__link" href="#">
+              <li class="slider__item slider__item--catalog">
+                <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
                       srcset="img/dainty-gold-necklace-mobile@1x.webp, img/dainty-gold-necklace-mobile@2x.webp 2x">
@@ -173,14 +174,14 @@
                     <img src="img/dainty-gold-necklace-desktop@1x.jpg"
                       srcset="img/dainty-gold-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain">
                   </picture>
-                  <div class="product__description">
+                  <div class="slider__description">
                     <h3>Gold chain</h3>
-                    <span>$ 215</span>
+                    <span class="slider__price">$ 215</span>
                   </div>
                 </a>
               </li>
-              <li class="product__item product__item--catalog">
-                <a class="product__link" href="#">
+              <li class="slider__item slider__item--catalog">
+                <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
                       srcset="img/galaxy-earrings-mobile@1x.webp, img/galaxy-earrings-mobile@2x.webp 2x">
@@ -191,9 +192,9 @@
                     <img src="img/galaxy-earrings-desktop@1x.jpg" srcset="img/galaxy-earrings-desktop@2x.jpg 2x"
                       width="270" height="284" alt="Galaxy earrings">
                   </picture>
-                  <div class="product__description">
+                  <div class="slider__description">
                     <h3>Galaxy earrings</h3>
-                    <span>$ 95</span>
+                    <span class="slider__price">$ 95</span>
                   </div>
                 </a>
               </li>
@@ -284,7 +285,7 @@
           <ul class="faq__list">
             <li class="faq__item">
               <h4 tabindex="0">What materials are<br> the jewellery made of?
-                <svg class="faq__icon--up-dir" width="15" height="8" role="img">
+                <svg class="faq__icon faq__icon--up-dir" width="15" height="8">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </h4>
@@ -293,21 +294,21 @@
             </li>
             <li class="faq__item">
               <h4 tabindex="0">Which countries<br> do you deliver to?
-                <svg width="15" height="8" role="img">
+                <svg class="faq__icon" width="15" height="8">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </h4>
             </li>
             <li class="faq__item">
               <h4 tabindex="0">What are the<br> payment methods?
-                <svg width="15" height="8" role="img">
+                <svg class="faq__icon" width="15" height="8">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </h4>
             </li>
             <li class="faq__item">
               <h4 tabindex="0">Can I return the<br> jewellery if it didn’t fit me?
-                <svg width="15" height="8" role="img">
+                <svg class="faq__icon" width="15" height="8">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </h4>
@@ -318,7 +319,7 @@
 
         <section class="gallery">
           <div class="gallery__box">
-            <h2><span>@</span>Chjewellery</h2>
+            <h2><span class="gallery__sign">@</span>Chjewellery</h2>
             <a href="#">Follow Us</a>
           </div>
           <div class="gallery__wrapper">
@@ -434,13 +435,13 @@
       <div class="page-footer__wrapper container">
 
         <div class="page-footer__subscribe subscribe">
-          <h2 class="subscribe__title">The good stuff in your inbox</h2>
+          <h2>The good stuff in your inbox</h2>
           <p>News and updates from CH. No spam, we promise.</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="input-subscribe">E-mail form</label>
             <div class="subscribe__inner">
               <input id="input-subscribe" type="email" name="subscribe-newsletter" placeholder="Your E-mail">
-              <button type="submit">Sign Up
+              <button type="submit" aria-label="Open sign up window">Sign Up
                 <svg width="29" height="9" role="img">
                   <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
                 </svg>
@@ -482,7 +483,7 @@
             <li class="page-footer__item">
               <a class="page-footer__link" href="#" aria-label="Redirect to a Facebook page">
                 <div class="page-footer__icon-wrapper">
-                  <svg class="page-footer__icon page-footer__icon--fb" width="15" height="15">
+                  <svg class="page-footer__icon page-footer__icon--fb" width="15" height="15" role="img">
                     <use xlink:href="img/sprite.svg#icon-facebook"></use>
                   </svg>
                   <span class="page-footer__text">Facebook</span>

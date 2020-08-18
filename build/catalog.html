@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jewellery shop</title>
-  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-regular.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-600.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-700.woff2" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-500italic.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-v12-latin-regular.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-v12-latin-500.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-v12-latin-700.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-regular.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-600.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-700.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-italic.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-v7-latin-500italic.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/poppins-v12-latin-regular.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/poppins-v12-latin-500.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/poppins-v12-latin-700.woff2" as="font" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -34,7 +35,7 @@
             <input id="input-search" type="search" name="search" placeholder="Type here to search">
           </label>
         </form>
-        <a class="page-header__logo" aria-label="Jewellery shop CH logo image">
+        <a class="page-header__logo" href="main.html" aria-label="Jewellery shop CH logo image">
           <svg class="page-header__icon-logo" width="66" height="66" role="img">
             <use xlink:href="img/sprite.svg#icon-logo"></use>
           </svg>
@@ -91,7 +92,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Jewellery shop CH</h1>
 
-      <section class="fisrt-screen first-screen--catalog">
+      <section class="first-screen first-screen--catalog">
         <h2 class="visually-hidden">First Screen</h2>
         <div class="first-screen__wrapper">
           <p>All Jewellery</p>
@@ -103,11 +104,11 @@
 
         <section class="filter filter--modal">
           <h2 class="visually-hidden">Filter</h2>
-          <form class="filter__form" action="">
+          <form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset>
               <div class="filter__legend-wrapper">
                 <legend>Product</legend>
-                <svg class="filter__icon--up-dir" width="15" height="8" role="img">
+                <svg class="filter__icon filter__icon--up-dir" width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </div>
@@ -133,7 +134,7 @@
             <fieldset>
               <div class="filter__legend-wrapper">
                 <legend>Material</legend>
-                <svg width="15" height="8" role="img">
+                <svg class="filter__icon" width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </div>
@@ -149,7 +150,7 @@
             <fieldset>
               <div class="filter__legend-wrapper">
                 <legend>Price</legend>
-                <svg class="filter__icon--up-dir" width="15" height="8" role="img">
+                <svg class="filter__icon filter__icon--up-dir" width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </div>
@@ -162,23 +163,25 @@
                   <div class="range__thumb range__thumb--max"></div>
                 </div>
                 <div class="range__controls">
-                  <input type="text" value="$ 55">
-                  <input type="text" value="$ 155">
+                  <input type="text" value="$ 55" id="max-price">
+                  <label for="max-price"></label>
+                  <input type="text" value="$ 155" id="min-price">
+                  <label for="min-price" tabindex="0"></label>
                 </div>
               </div>
             </fieldset>
           </form>
           <button class="filter__button-apply" type="submit">Apply</button>
-          <a class="filter__link" href="#">Clear All</a>
-          <button class="filter__button-close" type="button">
-            <svg width="14" height="14" role="img">
+          <button class="filter__button-reset" type="reset">Clear All</button>
+          <button class="filter__button-close" type="button" aria-label="Close window">
+            <svg class="filter__icon" width="14" height="14" role="img">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
         </section>
 
         <section class="catalog">
-          <button class="catalog__button-filter" type="button">Filter</button>
+          <button class="catalog__button-filter" type="button" aria-label="Open filter window">Filter</button>
           <ul class="catalog__list">
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -375,16 +378,16 @@
           </ul>
         </section>
       </div>
-      <div class="catalog__pagination container">
-        <button class="catalog__button-pagination" type="button">Previous</button>
-        <ul class="catalog__pagination-list pagination pagination--catalog">
+      <div class="page-main__pagination container">
+        <button class="page-main__button" type="button">Previous</button>
+        <ul class="page-main__list pagination pagination--catalog">
           <li class="pagination__item pagination__item--current"><a class="pagination__link" href="#">1</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
         </ul>
-        <button class="catalog__button-pagination" type="button">Next</button>
+        <button class="page-main__button" type="button">Next</button>
       </div>
 
     </main>
@@ -393,13 +396,13 @@
       <div class="page-footer__wrapper container">
 
         <div class="page-footer__subscribe subscribe">
-          <h2 class="subscribe__title">The good stuff in your inbox</h2>
+          <h2>The good stuff in your inbox</h2>
           <p>News and updates from CH. No spam, we promise.</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="input-subscribe">E-mail form</label>
             <div class="subscribe__inner">
               <input id="input-subscribe" type="email" name="subscribe-newsletter" placeholder="Your E-mail">
-              <button type="submit">Sign Up
+              <button type="submit" aria-label="Open sign up window">Sign Up
                 <svg width="29" height="9" role="img">
                   <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
                 </svg>

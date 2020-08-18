@@ -7,8 +7,8 @@
 }
 
 .pagination__link {
-  margin-left: 6px;
-  margin-right: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
 
   font-style: normal;
   font-weight: 500;
@@ -30,7 +30,7 @@
 
 @media (max-width: $tablet-width) {
   .pagination__link {
-    margin-left: 7px;
+    padding-left: 7px;
   }
 
   .pagination__item--tablet {
@@ -40,8 +40,8 @@
 
 @media (max-width: $mobile-width) {
   .pagination__link {
-    margin-left: 9px;
-    margin-right: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
 
     color: #1d1613;
   }
@@ -61,8 +61,8 @@
     }
 
     .pagination__link {
-      margin-left: 12px;
-      margin-right: 12px;
+      padding-left: 12px;
+      padding-right: 12px;
     }
   }
 }
