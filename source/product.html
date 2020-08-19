@@ -282,7 +282,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="slider__pagination pagination">
+            <ul class="slider__pagination pagination pagination--product">
               <li class="pagination__item pagination__item--current"><a class="pagination__link" href="#">1</a></li>
               <li class="pagination__item pagination__item--mobile"><span>of</span></li>
               <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
@@ -399,20 +399,18 @@
       <p>The item was added to your cart</p>
       <div class="modal-cart__item">
         <div class="modal-cart__info">
-          <div class="modal-cart__image">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)"
-                srcset="img/gold-necklace-cart-mobile@1x.webp, img/gold-necklace-cart-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)"
-                srcset="img/gold-necklace-cart-tablet@1x.webp, img/gold-necklace-cart-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="img/gold-necklace-cart-desktop@1x.webp, img/gold-necklace-cart-desktop@2x.webp 2x">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/gold-necklace-cart-mobile@1x.webp, img/gold-necklace-cart-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/gold-necklace-cart-tablet@1x.webp, img/gold-necklace-cart-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/gold-necklace-cart-desktop@1x.webp, img/gold-necklace-cart-desktop@2x.webp 2x">
 
-              <!-- 1x: 84px 2x: 168px -->
-              <img src="img/gold-necklace-cart-desktop@1x.jpg" srcset="img/gold-necklace-cart-desktop@2x.jpg 2x"
-                width="84" height="79" alt="Gold Necklace">
-            </picture>
-          </div>
+            <!-- 1x: 84px 2x: 168px -->
+            <img src="img/gold-necklace-cart-desktop@1x.jpg" srcset="img/gold-necklace-cart-desktop@2x.jpg 2x"
+              width="84" height="79" alt="Gold Necklace">
+          </picture>
           <div class="modal-cart__description">
             <h3>Gold Necklace</h3>
             <span class="modal-cart__price">$ 115</span>
@@ -432,6 +430,7 @@
           </button>
         </div>
       </div>
+
       <div class="modal-cart__total">
         <div class="modal-cart__box">
           <span class="modal-cart__quantity">You have 1 item in the cart</span>

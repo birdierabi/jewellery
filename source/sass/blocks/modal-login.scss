@@ -1,0 +1,275 @@
+.modal-login {
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: #f0eae4;
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
+}
+
+.modal-login__wrapper {
+  padding-bottom: 138px;
+
+  background-image: url("../img/login-background-desktop@1x.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/login-background-desktop@2x.jpg");
+  }
+}
+
+.modal-login__inner {
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 50px;
+}
+
+.modal-login__inner h2 {
+  margin: 0;
+  margin-bottom: 33px;
+
+  font-family: $cg-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+
+  color: #1d1613;
+}
+
+.modal-login__inner p {
+  margin: 0;
+
+  font-family: $poppins-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #9b9997;
+}
+
+.modal-login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-login__email input,
+.modal-login__password input {
+  flex-grow: 1;
+  padding: 0;
+
+  font-family: $poppins-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  border: none;
+
+  background-color: inherit;
+
+  &::placeholder {
+    font-family: $poppins-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #9b9997;
+  }
+}
+
+.modal-login__email {
+  display: flex;
+  align-items: baseline;
+  min-height: 30px;
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid #1d1613;
+}
+
+.modal-login__password {
+  display: flex;
+  align-items: baseline;
+  min-height: 30px;
+  margin-bottom: 5px;
+
+  border-bottom: 1px solid #1d1613;
+}
+
+.modal-login__form a {
+  margin-bottom: 45px;
+  margin-left: 59%;
+
+  font-family: $poppins-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+
+  color: #9b9997;
+}
+
+.modal-login__form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 146px;
+  padding-right: 146px;
+  margin-bottom: 15px;
+
+  font-family: $poppins-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #ffffff;
+
+  background-color: #a87b62;
+  border: 1px solid #a87b62;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.modal-login__signup {
+  margin-left: 5px;
+
+  font-family: $poppins-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #1d1613;
+}
+
+.modal-login__close {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+
+  background-color: inherit;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.modal-login__icon {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: $tablet-width) {
+  .modal-login__wrapper {
+    padding-bottom: 138px;
+
+    background-image: url("../img/login-background-tablet@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/login-background-tablet@2x.jpg");
+    }
+  }
+
+  .modal-login__inner {
+    padding-left: 51px;
+    padding-right: 51px;
+  }
+
+  .modal-login__close {
+    width: 20px;
+    height: 20px;
+  }
+
+  .modal-login__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .modal-login__wrapper {
+    padding-bottom: 84px;
+
+    background-image: url("../img/login-background-mobile@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/login-background-mobile@2x.jpg");
+    }
+  }
+
+  .modal-login__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 37px;
+  }
+
+  .modal-login__inner h2 {
+    margin-bottom: 27px;
+
+    font-size: 24px;
+  }
+
+  .modal-login__email {
+    margin-bottom: 30px;
+  }
+
+  .modal-login__form a {
+    margin-left: 42%;
+    margin-bottom: 35px;
+  }
+
+  .modal-login__form button {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+
+  .modal-login__close {
+    top: 15px;
+    right: 15px;
+
+    width: 14px;
+    height: 14px;
+  }
+
+  .modal-login__icon {
+    width: 14px;
+    height: 14px;
+  }
+}
