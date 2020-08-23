@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jewellery shop CH catalog - rings, bracelets and other beautiful pieces of jewellery">
   <title>Jewellery shop</title>
   <link rel="preload" href="fonts/cormorant-garamond-v7-latin-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/cormorant-garamond-v7-latin-600.woff2" as="font" crossorigin>
@@ -20,9 +22,9 @@
 
   <div class="wrapper">
 
-    <header class="page-header page-header--menu-active">
+    <header class="page-header">
       <div class="page-header__top container">
-        <button class="page-header__toggle page-header__toggle--active" type="button" aria-label="Menu button">
+        <button class="page-header__toggle" type="button" aria-label="Menu button">
           <svg class="page-header__icon page-header__icon--mobile-menu" width="25" height="18" role="img">
             <use xlink:href="img/sprite.svg#icon-mobile-menu"></use>
           </svg>
@@ -42,7 +44,7 @@
         </a>
         <ul class="page-header__list">
           <li class="page-header__item">
-            <a class="page-header__link" href="#">Login</a>
+            <a class="page-header__link page-header__link--login" href="#">Login</a>
           </li>
           <li class="page-header__item">
             <a class="page-header__link" href="#">Cart <span class="page-header__cart-counter">0</span></a>
@@ -90,7 +92,7 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Jewellery shop CH</h1>
+      <h1 class="visually-hidden">Jewellery shop CH catalog</h1>
 
       <section class="first-screen first-screen--catalog">
         <h2 class="visually-hidden">First Screen</h2>
@@ -102,12 +104,12 @@
 
       <div class="page-main__wrapper container">
 
-        <section class="filter filter--modal">
+        <section class="filter">
           <h2 class="visually-hidden">Filter</h2>
           <form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset>
+            <fieldset class="filter__fieldset--open">
               <div class="filter__legend-wrapper">
-                <legend>Product</legend>
+                <label>Product</label>
                 <svg class="filter__icon filter__icon--up-dir" width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
@@ -133,7 +135,7 @@
             </fieldset>
             <fieldset>
               <div class="filter__legend-wrapper">
-                <legend>Material</legend>
+                <label>Material</label>
                 <svg class="filter__icon" width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
@@ -141,32 +143,32 @@
             </fieldset>
             <fieldset>
               <div class="filter__legend-wrapper">
-                <legend>Collection</legend>
-                <svg width="15" height="8" role="img">
+                <label>Collection</label>
+                <svg  class="filter__icon" width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter__fieldset--open">
               <div class="filter__legend-wrapper">
-                <legend>Price</legend>
+                <label>Price</label>
                 <svg class="filter__icon filter__icon--up-dir" width="15" height="8" role="img">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
                 </svg>
               </div>
-              <div class="filter__range range">
+              <div class="filter__list range">
                 <div class="range__thumbs">
                   <div class="range__scale">
                     <div class="range__bar"></div>
+                    <div class="range__thumb range__thumb--min"></div>
+                    <div class="range__thumb range__thumb--max"></div>
                   </div>
-                  <div class="range__thumb range__thumb--min"></div>
-                  <div class="range__thumb range__thumb--max"></div>
                 </div>
                 <div class="range__controls">
-                  <input type="text" value="$ 55" id="max-price">
+                  <input type="text" value="$ 55" id="min-price">
+                  <label for="min-price"></label>
+                  <input type="text" value="$ 155" id="max-price">
                   <label for="max-price"></label>
-                  <input type="text" value="$ 155" id="min-price">
-                  <label for="min-price" tabindex="0"></label>
                 </div>
               </div>
             </fieldset>
@@ -174,7 +176,7 @@
           <button class="filter__button-apply" type="submit">Apply</button>
           <button class="filter__button-reset" type="reset">Clear All</button>
           <button class="filter__button-close" type="button" aria-label="Close window">
-            <svg class="filter__icon" width="14" height="14" role="img">
+            <svg class="filter__icon-close" width="14" height="14" role="img">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
@@ -543,8 +545,36 @@
       </div>
     </footer>
 
+    <section class="modal-login">
+      <div class="modal-login__container">
+        <div class="modal-login__wrapper"></div>
+        <div class="modal-login__inner">
+          <h2>Log In</h2>
+          <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal-login__email">
+              <label for="user-email"></label>
+              <input id="user-email" type="email" name="login" placeholder="Your E-mail" required>
+            </div>
+            <div class="modal-login__password">
+              <label for="user-password"></label>
+              <input id="user-password" type="password" name="password" placeholder="Password" required>
+            </div>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Log In</button>
+          </form>
+          <p>Don’t have an account?<a class="modal-login__signup" href="#">Sign Up</a></p>
+          <button class="modal-login__close" type="button" aria-label="Close login window">
+            <svg class="modal-login__icon" width="14" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
   </div>
 
+  <script src="js/main.js"></script>
 </body>
 
 </html>

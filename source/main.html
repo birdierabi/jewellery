@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jewellery shop where you can buy the perfect gift - rings, bracelets and other beautiful pieces of jewellery">
   <title>Jewellery shop</title>
   <link rel="preload" href="fonts/cormorant-garamond-v7-latin-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/cormorant-garamond-v7-latin-600.woff2" as="font" crossorigin>
@@ -19,10 +21,10 @@
 <body>
   <div class="wrapper">
 
-    <header class="page-header page-header--menu-active">
+    <header class="page-header">
       <div class="page-header__top container">
-        <button class="page-header__toggle page-header__toggle--active" type="button" aria-label="Menu button">
-          <svg class="page-header__icon page-header__icon--mobile-menu" width="25" height="18" role="img">
+        <button class="page-header__toggle" type="button" aria-label="Menu button">
+          <svg class="page-header__icon" width="25" height="18" role="img">
             <use xlink:href="img/sprite.svg#icon-mobile-menu"></use>
           </svg>
         </button>
@@ -41,7 +43,7 @@
         </a>
         <ul class="page-header__list">
           <li class="page-header__item">
-            <a class="page-header__link" href="#">Login</a>
+            <a class="page-header__link page-header__link--login" href="#">Login</a>
           </li>
           <li class="page-header__item">
             <a class="page-header__link" href="#">Cart <span class="page-header__cart-counter">0</span></a>
@@ -103,7 +105,7 @@
 
         <section class="slider">
           <div class="slider__control">
-            <button class="slider__button" type="button" aria-label="Previous page">
+            <button class="slider__button slider__button--left" type="button" data-action="slideLeft" aria-label="Previous page">
               <svg class="slider__icon slider__icon--left-arrow" width="29" height="9" role="img">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
               </svg>
@@ -112,15 +114,15 @@
               <h2>New In</h2>
               <a href="#">Shop Now</a>
             </div>
-            <button class="slider__button" type="button" aria-label="Next page">
+            <button class="slider__button slider__button--right" type="button" data-action="slideRight" aria-label="Next page">
               <svg class="slider__icon" width="29" height="9" role="img">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
               </svg>
             </button>
           </div>
           <div class="slider__inner">
-            <ul class="slider__list">
-              <li class="slider__item">
+            <ul class="slider__list" data-target="carousel">
+              <li class="slider__item" data-target="card">
                 <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -141,7 +143,7 @@
                   </div>
                 </a>
               </li>
-              <li class="slider__item">
+              <li class="slider__item" data-target="card">
                 <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -162,7 +164,7 @@
                   </div>
                 </a>
               </li>
-              <li class="slider__item slider__item--catalog">
+              <li class="slider__item slider__item--catalog" data-target="card">
                 <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -180,7 +182,7 @@
                   </div>
                 </a>
               </li>
-              <li class="slider__item slider__item--catalog">
+              <li class="slider__item slider__item--catalog" data-target="card">
                 <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -200,7 +202,7 @@
               </li>
             </ul>
             <ul class="slider__pagination pagination">
-              <li class="pagination__item pagination__item--current"><a class="pagination__link" href="#">1</a></li>
+              <li class="pagination__item pagination__item--current  toggle__number--left"><a class="pagination__link" href="#">1</a></li>
               <li class="pagination__item pagination__item--mobile"><span>of</span></li>
               <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
               <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
@@ -283,7 +285,7 @@
         <section class="faq">
           <h2>Frequently asked questions</h2>
           <ul class="faq__list">
-            <li class="faq__item">
+            <li class="faq__item faq__item--open">
               <h4 tabindex="0">What materials are<br> the jewellery made of?
                 <svg class="faq__icon faq__icon--up-dir" width="15" height="8">
                   <use xlink:href="img/sprite.svg#icon-down-dir"></use>
@@ -526,33 +528,35 @@
       </div>
     </footer>
 
-    <section class="modal modal-login">
-      <div class="modal-login__wrapper"></div>
-      <div class="modal-login__inner">
-        <h2>Log In</h2>
-        <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="modal-login__email">
-            <label for="user-email"></label>
-            <input id="user-email" type="email" name="email" placeholder="Your E-mail">
-          </div>
-          <div class="modal-login__password">
-            <label for="user-password"></label>
-            <input id="user-password" type="password" name="password" placeholder="Password">
-          </div>
-          <a href="#">Forgot your password?</a>
-          <button type="submit">Log In</button>
-        </form>
-        <p>Don’t have an account?<a class="modal-login__signup" href="#">Sign Up</a></p>
-        <button class="modal-login__close" type="button" aria-label="Close login window">
-          <svg class="modal-login__icon" width="14" height="14" role="img">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
+    <section class="modal-login">
+      <div class="modal-login__container">
+        <div class="modal-login__wrapper"></div>
+        <div class="modal-login__inner">
+          <h2>Log In</h2>
+          <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal-login__email">
+              <label for="user-email"></label>
+              <input id="user-email" type="email" name="login" placeholder="Your E-mail" required>
+            </div>
+            <div class="modal-login__password">
+              <label for="user-password"></label>
+              <input id="user-password" type="password" name="password" placeholder="Password" required>
+            </div>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Log In</button>
+          </form>
+          <p>Don’t have an account?<a class="modal-login__signup" href="#">Sign Up</a></p>
+          <button class="modal-login__close" type="button" aria-label="Close login window">
+            <svg class="modal-login__icon" width="14" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
   </div>
-
+  <script src="js/main.js"></script>
 </body>
 
 </html>

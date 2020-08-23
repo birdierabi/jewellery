@@ -1,14 +1,33 @@
 .modal-login {
+  position: fixed;
+  top: 127px;
+  left: 0;
+
+  display: none;
+  width: 100vw;
+  height: 786px;
+
+  background-color: #ffffff;
+}
+
+.modal-login--show {
+  display: block;
+}
+
+.modal-login__container {
   position: relative;
+  top: calc(50% - 293px);
 
   margin-left: auto;
   margin-right: auto;
+  max-width: 430px;
 
   background-color: #f0eae4;
   box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
 }
 
 .modal-login__wrapper {
+  position: relative;
   padding-bottom: 138px;
 
   background-image: url("../img/login-background-desktop@1x.jpg");
@@ -25,6 +44,7 @@
   padding-left: 45px;
   padding-right: 45px;
   padding-top: 50px;
+  padding-bottom: 54px;
 }
 
 .modal-login__inner h2 {
@@ -124,8 +144,8 @@
   padding: 0;
   padding-top: 23px;
   padding-bottom: 23px;
-  padding-left: 146px;
-  padding-right: 146px;
+  padding-left: 145px;
+  padding-right: 145px;
   margin-bottom: 15px;
 
   font-family: $poppins-font;
@@ -197,6 +217,14 @@
 }
 
 @media (max-width: $tablet-width) {
+  .modal-login {
+    height: 746px;
+  }
+
+  .modal-login__container {
+    max-width: 442px;
+  }
+
   .modal-login__wrapper {
     padding-bottom: 138px;
 
@@ -224,6 +252,15 @@
 }
 
 @media (max-width: $mobile-width) {
+  .modal-login {
+    height: 570px;
+  }
+
+  .modal-login__container {
+    max-width: 270px;
+    top: calc(50% - 235px);
+  }
+
   .modal-login__wrapper {
     padding-bottom: 84px;
 
@@ -238,6 +275,7 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 37px;
+    padding-bottom: 39px;
   }
 
   .modal-login__inner h2 {
@@ -256,8 +294,8 @@
   }
 
   .modal-login__form button {
-    padding-left: 96px;
-    padding-right: 96px;
+    padding-left: 95px;
+    padding-right: 95px;
   }
 
   .modal-login__close {
