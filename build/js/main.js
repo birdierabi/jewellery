@@ -15,6 +15,7 @@
   var filter = document.querySelectorAll('.filter__form fieldset');
   var svgFilter = document.querySelectorAll('.filter__icon');
   var openFilter = document.querySelector('.catalog__button-filter');
+  var container = document.querySelector('.slider__inner');
 
   var isStorageSupport = true;
   var storage = '';
@@ -147,40 +148,54 @@
     });
   }
 
-  (function () {
-    var feedbacks = document.querySelectorAll('.slider__item');
-    var hideFeedback = function () {
-      feedbacks.forEach(function (e) {
-        e.style.display = 'none';
+  if (container) {
+    window.addEventListener('resize', function (evt) {
+      var position = 0;
+      var slidesToMove = 4;
+      var slidesToShow = 4;
+
+      var track = document.querySelector('.slider__list');
+      var btnNext = document.querySelector('.slider__button--right');
+      var btnPrev = document.querySelector('.slider__button--left');
+      var itemWidth = container.clientWidth / slidesToShow;
+      var itemsCount = document.querySelectorAll('.slider__item').length;
+      var movePosition = slidesToMove * itemWidth;
+
+      evt.preventDefault();
+
+      btnNext.addEventListener('click', function (evt) {
+        var itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+
+        evt.preventDefault();
+        if (itemsCount > slidesToMove) {
+          position -= itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
+          setPosition();
+        } else {
+          itemsLeft = slidesToMove;
+          position -= itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
+          setPosition();
+        }
       });
-    };
-    var number = document.querySelector('.toggle__number--left');
-    var index = 0;
-    var changeFeedback = function () {
-      feedbacks[index].style.display = 'flex';
-    };
-    var changeNumber = function () {
-      number.textContent = (index + 1);
-    };
-    var left = document.querySelector('.slider__button--left');
-    var right = document.querySelector('.slider__button--right');
-    left.addEventListener('click', function () {
-      index -= 2;
-      if (index <= 0) {
-        index = 0;
-      }
-      hideFeedback();
-      changeFeedback();
-      changeNumber();
+
+      btnPrev.addEventListener('click', function (evt) {
+        var itemsLeft = Math.abs(position) / itemWidth;
+
+        evt.preventDefault();
+        position += itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
+        setPosition();
+      });
+
+      var setPosition = function () {
+        track.style.transform = `translateX(${position}px)`;
+        checkBtns();
+      };
+
+      var checkBtns = function () {
+        btnPrev.disabled = position === 0;
+      };
+
+      checkBtns();
     });
-    right.addEventListener('click', function () {
-      index += 2;
-      if (index >= feedbacks.length) {
-        index = 0;
-      }
-      hideFeedback();
-      changeFeedback();
-      changeNumber();
-    });
-  })();
+  }
+
 })();

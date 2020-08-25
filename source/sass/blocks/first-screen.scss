@@ -32,7 +32,7 @@
 }
 
 
-.first-screen__wrapper span {
+.first-screen__text {
   display: block;
 
   font-family: $cg-font;
@@ -63,7 +63,7 @@
     letter-spacing: unset;
   }
 
-  .first-screen__wrapper span {
+  .first-screen__text {
     font-weight: 500;
     font-size: 22px;
   }
@@ -131,7 +131,7 @@
     font-size: 38px;
   }
 
-  .first-screen__wrapper span {
+  .first-screen__text {
     font-size: 34px;
   }
 }

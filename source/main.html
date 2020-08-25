@@ -97,7 +97,7 @@
         <h2 class="visually-hidden">First Screen</h2>
         <div class="first-screen__wrapper">
           <p>Perfection</p>
-          <span>made to be yours</span>
+          <span class="first-screen__text">made to be yours</span>
         </div>
       </section>
 
@@ -105,7 +105,8 @@
 
         <section class="slider">
           <div class="slider__control">
-            <button class="slider__button slider__button--left" type="button" data-action="slideLeft" aria-label="Previous page">
+            <button class="slider__button slider__button--left" type="button" data-action="slideLeft"
+              aria-label="Previous page">
               <svg class="slider__icon slider__icon--left-arrow" width="29" height="9" role="img">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
               </svg>
@@ -114,15 +115,16 @@
               <h2>New In</h2>
               <a href="#">Shop Now</a>
             </div>
-            <button class="slider__button slider__button--right" type="button" data-action="slideRight" aria-label="Next page">
+            <button class="slider__button slider__button--right" type="button" data-action="slideRight"
+              aria-label="Next page">
               <svg class="slider__icon" width="29" height="9" role="img">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
               </svg>
             </button>
           </div>
           <div class="slider__inner">
-            <ul class="slider__list" data-target="carousel">
-              <li class="slider__item" data-target="card">
+            <ul class="slider__list">
+              <li class="slider__item">
                 <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -143,7 +145,7 @@
                   </div>
                 </a>
               </li>
-              <li class="slider__item" data-target="card">
+              <li class="slider__item">
                 <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -164,7 +166,7 @@
                   </div>
                 </a>
               </li>
-              <li class="slider__item slider__item--catalog" data-target="card">
+              <li class="slider__item slider__item--catalog">
                 <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -182,7 +184,7 @@
                   </div>
                 </a>
               </li>
-              <li class="slider__item slider__item--catalog" data-target="card">
+              <li class="slider__item slider__item--catalog">
                 <a class="slider__link" href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -201,18 +203,19 @@
                 </a>
               </li>
             </ul>
-            <ul class="slider__pagination pagination">
-              <li class="pagination__item pagination__item--current  toggle__number--left"><a class="pagination__link" href="#">1</a></li>
-              <li class="pagination__item pagination__item--mobile"><span>of</span></li>
-              <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-              <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-              <li class="pagination__item pagination__item--tablet"><a class="pagination__link" href="#">4</a></li>
-              <li class="pagination__item pagination__item--tablet"><a class="pagination__link" href="#">5</a></li>
-              <li class="pagination__item pagination__item--tablet pagination__item--mobile"><a class="pagination__link"
-                  href="#">6</a></li>
-            </ul>
           </div>
+          <ul class="slider__pagination pagination">
+            <li class="pagination__item pagination__item--current"><a class="pagination__link" href="#">1</a></li>
+            <li class="pagination__item pagination__item--mobile"><span>of</span></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+            <li class="pagination__item pagination__item--tablet"><a class="pagination__link" href="#">4</a></li>
+            <li class="pagination__item pagination__item--tablet"><a class="pagination__link" href="#">5</a></li>
+            <li class="pagination__item pagination__item--tablet pagination__item--mobile"><a class="pagination__link"
+                href="#">6</a></li>
+          </ul>
         </section>
+
 
         <section class="blog">
           <div class="blog__box">
@@ -444,7 +447,7 @@
             <div class="subscribe__inner">
               <input id="input-subscribe" type="email" name="subscribe-newsletter" placeholder="Your E-mail">
               <button type="submit" aria-label="Open sign up window">Sign Up
-                <svg width="29" height="9" role="img">
+                <svg class="subscribe__icon" width="29" height="9" role="img">
                   <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
                 </svg>
               </button>

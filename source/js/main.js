@@ -15,6 +15,7 @@
   var filter = document.querySelectorAll('.filter__form fieldset');
   var svgFilter = document.querySelectorAll('.filter__icon');
   var openFilter = document.querySelector('.catalog__button-filter');
+  var container = document.querySelector('.slider__inner');
 
   var isStorageSupport = true;
   var storage = '';
@@ -146,4 +147,55 @@
       filterModal.classList.remove('filter--modal');
     });
   }
+
+  if (container) {
+    window.addEventListener('resize', function (evt) {
+      var position = 0;
+      var slidesToMove = 4;
+      var slidesToShow = 4;
+
+      var track = document.querySelector('.slider__list');
+      var btnNext = document.querySelector('.slider__button--right');
+      var btnPrev = document.querySelector('.slider__button--left');
+      var itemWidth = container.clientWidth / slidesToShow;
+      var itemsCount = document.querySelectorAll('.slider__item').length;
+      var movePosition = slidesToMove * itemWidth;
+
+      evt.preventDefault();
+
+      btnNext.addEventListener('click', function (evt) {
+        var itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+
+        evt.preventDefault();
+        if (itemsCount > slidesToMove) {
+          position -= itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
+          setPosition();
+        } else {
+          itemsLeft = slidesToMove;
+          position -= itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
+          setPosition();
+        }
+      });
+
+      btnPrev.addEventListener('click', function (evt) {
+        var itemsLeft = Math.abs(position) / itemWidth;
+
+        evt.preventDefault();
+        position += itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
+        setPosition();
+      });
+
+      var setPosition = function () {
+        track.style.transform = `translateX(${position}px)`;
+        checkBtns();
+      };
+
+      var checkBtns = function () {
+        btnPrev.disabled = position === 0;
+      };
+
+      checkBtns();
+    });
+  }
+
 })();
