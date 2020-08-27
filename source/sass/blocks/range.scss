@@ -59,6 +59,7 @@
 }
 
 .range__controls {
+
   display: flex;
 }
 
@@ -77,7 +78,11 @@
   text-align: center;
 
   color: #1d1613;
-  background-color: inherit;
+  background-color: transparent;
+
+  &::placeholder {
+    color: #1d1613;
+  }
 
   &:first-child {
     margin-right: 20px;

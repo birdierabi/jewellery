@@ -49,20 +49,24 @@
 }
 
 .gallery__wrapper {
+
   display: flex;
   justify-content: center;
 }
 
 .gallery__small-pictures-wrapper {
+
   display: flex;
   margin-right: 30px;
 }
 
 .gallery__big-pictures-wrapper {
+
   display: flex;
 }
 
 .gallery__block {
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

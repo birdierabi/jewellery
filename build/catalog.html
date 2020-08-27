@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Jewellery shop CH catalog - rings, bracelets and other beautiful pieces of jewellery">
   <title>Jewellery shop</title>
   <link rel="preload" href="fonts/cormorant-garamond-v7-latin-regular.woff2" as="font" crossorigin="">
@@ -21,7 +22,7 @@
 
   <div class="wrapper">
 
-    <header class="page-header">
+    <header class="page-header page-header--menu-active">
       <div class="page-header__top container">
         <button class="page-header__toggle" type="button" aria-label="Menu button">
           <svg class="page-header__icon page-header__icon--mobile-menu" width="25" height="18" role="img">
@@ -106,7 +107,7 @@
         <section class="filter">
           <h2 class="visually-hidden">Filter</h2>
           <form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="filter__fieldset--open">
+            <fieldset class="filter__fieldset filter__fieldset--open">
               <div class="filter__legend-wrapper">
                 <label>Product</label>
                 <svg class="filter__icon filter__icon--up-dir" width="15" height="8" role="img">
@@ -132,7 +133,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter__fieldset">
               <div class="filter__legend-wrapper">
                 <label>Material</label>
                 <svg class="filter__icon" width="15" height="8" role="img">
@@ -140,7 +141,7 @@
                 </svg>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter__fieldset">
               <div class="filter__legend-wrapper">
                 <label>Collection</label>
                 <svg class="filter__icon" width="15" height="8" role="img">
@@ -148,7 +149,7 @@
                 </svg>
               </div>
             </fieldset>
-            <fieldset class="filter__fieldset--open">
+            <fieldset class="filter__fieldset filter__fieldset--open">
               <div class="filter__legend-wrapper">
                 <label>Price</label>
                 <svg class="filter__icon filter__icon--up-dir" width="15" height="8" role="img">
@@ -379,7 +380,7 @@
           </ul>
         </section>
       </div>
-      <div class="page-main__pagination container">
+      <div class="page-main__pagination">
         <button class="page-main__button" type="button">Previous</button>
         <ul class="page-main__list pagination pagination--catalog">
           <li class="pagination__item pagination__item--current"><a class="pagination__link" href="#">1</a></li>
@@ -516,8 +517,8 @@
     </section>
 
   </div>
-
   <script src="js/main.js"></script>
+  <script src="js/vendor.js" defer=""></script>
 </body>
 
 </html>

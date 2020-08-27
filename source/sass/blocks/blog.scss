@@ -4,6 +4,7 @@
 }
 
 .blog__wrapper {
+
   display: flex;
   justify-content: center;
 }
@@ -42,6 +43,7 @@
 }
 
 .blog__inner {
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,7 +51,7 @@
 
 @media (max-width: $tablet-width) {
   .blog {
-    padding-top: 19px;
+    padding-top: 17px;
     padding-bottom: 35px;
   }
 

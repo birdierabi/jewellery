@@ -3,13 +3,16 @@
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .catalog__item {
+
   display: flex;
   justify-content: center;
   flex-basis: 31%;
   margin-bottom: 4.1%;
+  flex-shrink: 0;
 
   &:not(:nth-child(3n)) {
     margin-right: 3.5%;
@@ -56,6 +59,7 @@
   }
 
   .catalog__button-filter {
+
     display: flex;
     align-items: center;
     justify-content: center;

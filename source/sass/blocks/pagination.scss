@@ -1,10 +1,15 @@
-
 .pagination {
   @include reset-list;
+
 
   display: flex;
   justify-content: center;
   padding: 32px;
+}
+
+.pagination--catalog {
+  padding: 0;
+  margin-right: 35px;
 }
 
 .pagination__link {
@@ -57,6 +62,8 @@
   }
 
   .pagination--catalog {
+    margin-right: 0;
+
     .pagination__item {
       display: block;
     }

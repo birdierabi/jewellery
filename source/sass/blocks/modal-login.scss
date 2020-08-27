@@ -75,6 +75,7 @@
 }
 
 .modal-login__form {
+
   display: flex;
   flex-direction: column;
 }
@@ -92,7 +93,7 @@
 
   border: none;
 
-  background-color: inherit;
+  background-color: transparent;
 
   &::placeholder {
     font-family: $poppins-font;
@@ -106,6 +107,7 @@
 }
 
 .modal-login__email {
+
   display: flex;
   align-items: baseline;
   min-height: 30px;
@@ -115,6 +117,7 @@
 }
 
 .modal-login__password {
+
   display: flex;
   align-items: baseline;
   min-height: 30px;
@@ -138,6 +141,7 @@
 }
 
 .modal-login__form button {
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,6 +193,7 @@
   top: 20px;
   right: 20px;
 
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,7 +201,7 @@
   height: 14px;
   padding: 0;
 
-  background-color: inherit;
+  background-color: transparent;
   border: none;
 
   cursor: pointer;

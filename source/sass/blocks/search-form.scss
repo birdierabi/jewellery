@@ -27,13 +27,14 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: #9b9997;
+  color: #000000;
 
   border: none;
-  background-color: inherit;
+
+  background-color: transparent;
 
   &::placeholder {
-    color: inherit;
+    color: #9b9997;
   }
 }
 
