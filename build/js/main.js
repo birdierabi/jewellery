@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  var pageBody = document.body;
   var pageHeaderLink = document.querySelector('.page-header__link--login');
   var pageHeaderMenuLink = document.querySelector('.page-header__login-link');
   var popupLogin = document.querySelector('.modal-login');
@@ -36,7 +37,7 @@
   var loginOpen = function (evt) {
     evt.preventDefault();
     popupLogin.classList.add('modal-login--show');
-    document.body.add('no-scroll');
+    pageBody.classList.add('no-scroll');
 
     if (storage) {
       login.value = storage;
@@ -52,7 +53,7 @@
   closeLogin.addEventListener('click', function (evt) {
     evt.preventDefault();
     popupLogin.classList.remove('modal-login--show');
-    document.body.remove('no-scroll');
+    pageBody.classList.remove('no-scroll');
   });
 
   form.addEventListener('submit', function (evt) {
@@ -70,7 +71,7 @@
       if (popupLogin.classList.contains('modal-login--show')) {
         evt.preventDefault();
         popupLogin.classList.remove('modal-login--show');
-        document.body.remove('no-scroll');
+        pageBody.classList.remove('no-scroll');
       }
     }
   });
@@ -80,7 +81,7 @@
       if (popupLogin.classList.contains('modal-login--show')) {
         evt.preventDefault();
         popupLogin.classList.remove('modal-login--show');
-        document.body.remove('no-scroll');
+        pageBody.classList.remove('no-scroll');
       }
     }
   });
@@ -92,11 +93,13 @@
     openCart.addEventListener('click', function (evt) {
       evt.preventDefault();
       popupCart.classList.add('modal-cart--show');
+      pageBody.classList.add('no-scroll');
     });
 
     closeCart.addEventListener('click', function (evt) {
       evt.preventDefault();
       popupCart.classList.remove('modal-cart--show');
+      pageBody.classList.remove('no-scroll');
     });
 
     window.addEventListener('keydown', function (evt) {
@@ -104,6 +107,7 @@
         if (popupCart.classList.contains('modal-cart--show')) {
           evt.preventDefault();
           popupCart.classList.remove('modal-cart--show');
+          pageBody.classList.remove('no-scroll');
         }
       }
     });
@@ -113,6 +117,7 @@
         if (popupCart.classList.contains('modal-cart--show')) {
           evt.preventDefault();
           popupCart.classList.remove('modal-cart--show');
+          pageBody.classList.remove('no-scroll');
         }
       }
     });
