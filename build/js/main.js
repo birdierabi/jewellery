@@ -18,7 +18,6 @@
   var toggleFilter = document.querySelectorAll('.filter__legend-wrapper');
   var svgFilter = document.querySelectorAll('.filter__icon');
   var openFilter = document.querySelector('.catalog__button-filter');
-  var container = document.querySelector('.slider__inner');
 
   var isStorageSupport = true;
   var storage = '';
@@ -159,54 +158,6 @@
     closeFilter.addEventListener('click', function (evt) {
       evt.preventDefault();
       filterModal.classList.remove('filter--modal');
-    });
-  }
-
-  if (container) {
-    window.addEventListener('resize', function (evt) {
-      var position = 0;
-      var slidesToMove = 4;
-      var slidesToShow = 4;
-
-      var btnNext = document.querySelector('.slider__button--right');
-      var btnPrev = document.querySelector('.slider__button--left');
-      var itemWidth = container.clientWidth / slidesToShow;
-      var track = document.querySelector('.slider__list');
-      var itemsCount = document.querySelectorAll('.slider__item').length;
-      var movePosition = slidesToMove * itemWidth;
-
-      evt.preventDefault();
-
-      btnNext.addEventListener('click', function () {
-        var itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-
-        if (itemsCount > slidesToMove) {
-          position -= itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
-          setPosition();
-        } else {
-          itemsLeft = slidesToMove;
-          position -= itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
-          setPosition();
-        }
-      });
-
-      btnPrev.addEventListener('click', function () {
-        var itemsLeft = Math.abs(position) / itemWidth;
-
-        position += itemsLeft >= slidesToMove ? movePosition : itemsLeft * itemWidth;
-        setPosition();
-      });
-
-      var setPosition = function () {
-        track.style.transform = `translateX(${position}px)`;
-        checkBtns();
-      };
-
-      var checkBtns = function () {
-        btnPrev.disabled = position === 0;
-      };
-
-      checkBtns();
     });
   }
 })();
