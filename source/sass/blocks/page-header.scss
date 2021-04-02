@@ -48,6 +48,17 @@
 .page-header__link {
   font-size: 14px;
   color: #1d1613;
+
+  transition: ease-in 0.5s;
+
+  &:hover {
+    color: #a87b62;
+  }
+
+  &:focus,
+  &:active {
+    color: #a87b62;
+  }
 }
 
 .page-header__item:not(:first-child) {
