@@ -1,17 +1,16 @@
 .slider {
+  position: relative;
+
   padding-top: 120px;
   padding-bottom: 42px;
-}
-
-.slider__control {
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 59px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slider__button {
+  position: absolute;
+  top: 160px;
 
   display: flex;
   align-items: center;
@@ -32,6 +31,10 @@
   &:active {
     opacity: 0.3;
   }
+
+  &--right {
+    right: 0;
+  }
 }
 
 .slider__icon {
@@ -48,11 +51,13 @@
   }
 }
 
-.slider__box {
+.slider__title {
+  margin-bottom: 59px;
+
   text-align: center;
 }
 
-.slider__box h2 {
+.slider__title h2 {
   margin: 0;
   margin-bottom: 25px;
 
@@ -64,7 +69,7 @@
   text-align: center;
 }
 
-.slider__box a {
+.slider__title a {
   display: inline-block;
 
   vertical-align: baseline;
@@ -79,28 +84,16 @@
 }
 
 .slider__inner {
-  max-width: 1170px;
-
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .slider__list {
-  @include reset-list;
-
-
   display: flex;
   margin-bottom: 20px;
-
-  transition: 0.2s;
 }
 
 .slider__item {
-  min-width: 23%;
-}
-
-.slider__item:not(:nth-child(4n)) {
+  flex: 0 0 23%;
   margin-right: 2.6%;
 }
 
@@ -145,11 +138,11 @@
   padding-top: 60px;
   padding-bottom: 93px;
 
-  .slider__box h2 {
+  .slider__title h2 {
     margin-bottom: 20px;
   }
 
-  .slider__box a {
+  .slider__title a {
     padding-bottom: 5px;
   }
 
@@ -158,13 +151,14 @@
   }
 }
 
+.embla__slide {
+  position: relative;
+}
+
 @media (max-width: $tablet-width) {
   .slider {
     padding-top: 71px;
     padding-bottom: 17px;
-  }
-
-  .slider__inner {
     max-width: 678px;
   }
 
@@ -178,33 +172,25 @@
   }
 
   .slider__item {
-    min-width: 47.8%;
-
-    display: flex;
-    justify-content: center;
-  }
-
-  .slider__item--catalog {
-    display: none;
-  }
-
-  .slider__item:not(:nth-child(4n)) {
-    margin-right: 0;
-  }
-
-  .slider__item:nth-child(2n-1) {
+    flex: 0 0 47.8%;
     margin-right: 4.4%;
   }
 
-  .slider__box h2 {
+  .slider__title {
+    margin-bottom: 50px;
+  }
+
+  .slider__title h2 {
     margin-bottom: 20px;
   }
 
-  .slider__box a {
+  .slider__title a {
     padding-bottom: 3px;
   }
 
   .slider__button {
+    top: 65px;
+
     width: 36px;
     height: 15px;
   }
@@ -213,10 +199,6 @@
     width: 36px;
     height: 15px;
     margin-top: 9px;
-  }
-
-  .slider__control {
-    margin-bottom: 50px;
   }
 
   .slider--product {
@@ -262,8 +244,11 @@
     max-width: 130px;
   }
 
-  .slider__item--catalog {
-    display: none;
+  .slider__item {
+    display: inline-flex;
+    justify-content: center;
+    flex: 0 0 100%;
+    margin-right: 0;
   }
 
   .slider--product {
