@@ -82,6 +82,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
+  outline: 0;
 }
 
 body {
@@ -96,6 +98,18 @@ body {
   color: #2d2b29;
 
   background-color: #ffffff;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f0eae4;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #a87b62;
+  }
 }
 
 img {
@@ -124,15 +138,6 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-a:focus,
-a:active {
-  opacity: 0.3;
 }
 
 .wrapper {
