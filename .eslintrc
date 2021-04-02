@@ -1,7 +1,15 @@
-root: true
-
-env:
-  browser: true
-
-extends:
-  "htmlacademy/es5"
+root: true,
+"env": {
+    "browser": true,
+  },
+"parserOptions": {
+  "parser": "babel-eslint"
+},
+"extends": [
+],
+// add your custom rules here
+"rules": {
+  "indent": ["error", 2],
+  "quotes": ["error", "single"],
+  "semi": ["error", "never"],
+}
