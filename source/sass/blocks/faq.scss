@@ -44,7 +44,6 @@
 }
 
 .faq__item h4 {
-
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -53,14 +52,16 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
-  outline: none;
 
+  outline: none;
   cursor: pointer;
+  transition: ease-out 0.5s;
 
   &:hover {
     opacity: 0.7;
   }
 
+  &:focus,
   &:active {
     opacity: 0.3;
   }
@@ -100,13 +101,14 @@
 
   stroke: #a87b62;
   fill: #ffffff;
+
+  transform: rotate(0deg);
+  transition: 0.5s;
 }
 
 .faq__icon--up-dir {
   transform: rotate(-180deg);
-  transition: 0.5s;
 }
-
 
 @media (max-width: $tablet-width) {
   .faq {
