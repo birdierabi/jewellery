@@ -4,7 +4,6 @@
 }
 
 .page-footer__wrapper {
-
   display: flex;
   justify-content: space-between;
   padding-top: 90px;
@@ -18,14 +17,12 @@
 }
 
 .page-footer__subscribe {
-
   display: flex;
   flex-direction: column;
   flex-basis: 42.7%;
 }
 
 .page-footer__nav {
-
   display: flex;
   justify-content: space-between;
   flex-basis: 49%;
@@ -34,7 +31,6 @@
 
 .page-footer__list {
   @include reset-list;
-
 
   display: flex;
   flex-direction: column;
@@ -59,6 +55,17 @@
   font-size: 16px;
   line-height: 130%;
   color: #ffffff;
+
+  transition: ease-in 0.5s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__icon {

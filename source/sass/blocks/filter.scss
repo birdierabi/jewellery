@@ -21,6 +21,10 @@
 
   stroke: #a87b62;
   fill: #ffffff;
+
+  transform: rotate(0deg);
+  transition: 0.5s;
+
 }
 
 .filter__icon--up-dir {
@@ -52,12 +56,12 @@
 }
 
 .filter__legend-wrapper {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   cursor: pointer;
+  transition: ease-out 0.5s;
 
   &:hover {
     opacity: 0.7;
@@ -134,7 +138,6 @@
 }
 
 .filter__button-apply {
-
   display: flex;
   align-items: center;
   justify-content: center;

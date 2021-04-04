@@ -10,13 +10,11 @@
 
 .slider__button {
   position: absolute;
-  top: 160px;
+  top: 150px;
 
   display: flex;
   align-items: center;
-  width: 29px;
-  height: 11px;
-  padding: 0;
+  padding: 10px;
 
   border: none;
   background-color: transparent;
@@ -34,8 +32,12 @@
     opacity: 0.3;
   }
 
+  &--left {
+    left: -10px;
+  }
+
   &--right {
-    right: 0;
+    right: -10px;
   }
 }
 
@@ -203,9 +205,6 @@
 
   .slider__button {
     top: 65px;
-
-    width: 36px;
-    height: 15px;
   }
 
   .slider__icon {
