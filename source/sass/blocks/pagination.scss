@@ -1,18 +1,12 @@
 .pagination {
-  @include reset-list;
-
-
   display: flex;
   justify-content: center;
   padding: 32px;
+  counter-reset: page;
 }
 
-.pagination--catalog {
+.pagination__item {
   padding: 0;
-  margin-right: 35px;
-}
-
-.pagination__link {
   padding-left: 6px;
   padding-right: 6px;
 
@@ -21,56 +15,18 @@
   font-size: 16px;
   line-height: 130%;
   color: #9b9997;
+
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
 }
 
-.pagination__item--current {
-  .pagination__link {
-    color: #1d1613;
-  }
+.pagination__item:after {
+  counter-increment: page;
+  content: counter(page);
 }
 
-.pagination__item--tablet,
-.pagination__item--mobile {
-  display: none;
-}
-
-@media (max-width: $tablet-width) {
-  .pagination__link {
-    padding-left: 7px;
-  }
-
-  .pagination__item--tablet {
-    display: block;
-  }
-}
-
-@media (max-width: $mobile-width) {
-  .pagination__link {
-    padding-left: 9px;
-    padding-right: 9px;
-
-    color: #1d1613;
-  }
-
-  .pagination__item {
-    display: none;
-  }
-
-  .pagination__item--current,
-  .pagination__item--mobile {
-    display: block;
-  }
-
-  .pagination--catalog {
-    margin-right: 0;
-
-    .pagination__item {
-      display: block;
-    }
-
-    .pagination__link {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-  }
+.pagination__item.is-selected:after {
+  color: #1d1613;
 }
